@@ -481,6 +481,44 @@
       border-left: 4px solid var(--red);
     }
 
+
+    /* ── Clip cards mini ── */
+    .clips-mini-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-top: 48px;
+    }
+    .clip-mini {
+      background: #120D06; padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 10px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .clip-mini:hover { border-top-color: var(--mustard); background: #1E1509; }
+    .clip-mini-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1rem;
+      text-transform: uppercase; color: white; line-height: 1.2;
+    }
+    .clip-mini-platform {
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+    .clip-mini-stats {
+      display: flex; gap: 16px; margin-top: 4px;
+    }
+    .clip-mini-stat {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1.1rem;
+      color: var(--amber);
+      display: flex; align-items: center; gap: 5px;
+    }
+    .clip-mini-stat svg { opacity: 0.55; }
+    @media (max-width: 768px) {
+      .clips-mini-grid { grid-template-columns: 1fr; }
+    }
     /* ── Proof ── */
     .proof {
       background: var(--dark);
@@ -791,8 +829,34 @@
 
 <!-- PREUVE -->
 <section class="proof">
-  <div class="section-label light reveal">Preuves concrètes</div>
-  <div class="proof-grid">
+  <div class="section-label light reveal">Preuves concrètes · Top clips</div>
+  <div class="clips-mini-grid">
+    <div class="clip-mini reveal">
+      <div class="clip-mini-platform">Facebook · Rires Bruts Québec</div>
+      <div class="clip-mini-title">Papa va t'encu***, un fou rire mémorable</div>
+      <div class="clip-mini-stats">
+        <div class="clip-mini-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>6,8K</div>
+        <div class="clip-mini-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>130</div>
+      </div>
+    </div>
+    <div class="clip-mini reveal" style="transition-delay:.1s">
+      <div class="clip-mini-platform">Facebook · Rires Bruts Québec</div>
+      <div class="clip-mini-title">Le Fou de Villeray, aux rires de mes voisins</div>
+      <div class="clip-mini-stats">
+        <div class="clip-mini-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>7,3K</div>
+        <div class="clip-mini-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>143</div>
+      </div>
+    </div>
+    <div class="clip-mini reveal" style="transition-delay:.2s">
+      <div class="clip-mini-platform">Facebook · Rires Bruts Québec</div>
+      <div class="clip-mini-title">Dominic Paquet — Le calendrier</div>
+      <div class="clip-mini-stats">
+        <div class="clip-mini-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>4,7K</div>
+        <div class="clip-mini-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>452</div>
+      </div>
+    </div>
+  </div>
+  <div class="proof-grid" style="margin-top:2px;">
     <div class="proof-text reveal">
       <p>Un fan découvre un clip sur notre page, prend contact directement pour acheter des billets. Ce n'est pas du trafic générique — c'est un acheteur concret qui n'aurait jamais trouvé le show sans le clip.</p>
       <p>Multiplie ça par des dizaines de clips par semaine, et tu comprends l'effet compound. Chaque show est une mine de contenu. Chaque clip est une occasion de vendre un billet.</p>
