@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résultats — RBQC · Clipping &amp; Distribution</title>
+  <meta name="description" content="7,55 M d'impressions, 122 K interactions, 72% de rétention. Voici les résultats concrets de RBQC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Résultats — RBQC · 29M d'impressions">
+  <meta property="og:description" content="29M d'impressions, 398K interactions, 72% de rétention sur 12 mois. Voici les vrais chiffres de RBQC sur TikTok, Reels, Facebook et YouTube Shorts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rbqc.ca/portfolio.html">
+  <meta property="og:site_name" content="RBQC">
+  <meta property="og:image" content="https://rbqc.ca/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Résultats — RBQC · 29M d'impressions">
+  <meta name="twitter:description" content="29M d'impressions, 398K interactions, 72% de rétention sur 12 mois. Voici les vrais chiffres de RBQC sur TikTok, Reels, Facebook et YouTube Shorts.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Hero ── */
+    .hero {
+      min-height: 65vh;
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 140px 64px 80px;
+      position: relative; overflow: hidden;
+      background: var(--dark);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -10%; left: 50%;
+      transform: translateX(-55%);
+      width: 800px; height: 120%;
+      background: radial-gradient(ellipse 45% 65% at 50% -5%, rgba(245,196,0,0.18) 0%, rgba(212,144,10,0.06) 45%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; top: 0; right: -5%;
+      width: 500px; height: 100%;
+      background: radial-gradient(ellipse 40% 55% at 60% -5%, rgba(200,53,26,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 24px;
+      display: flex; align-items: center; gap: 14px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.2s forwards;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 22px; height: 2px;
+      background: var(--mustard); display: block; flex-shrink: 0;
+    }
+    .hero-number {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(6rem, 18vw, 18rem);
+      text-transform: uppercase; line-height: 0.82;
+      letter-spacing: -0.03em; color: var(--amber);
+      opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards;
+      position: relative; z-index: 1; margin-bottom: 0;
+    }
+    .hero-label {
+      font-size: clamp(0.8rem, 1.5vw, 1rem);
+      font-weight: 500; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+      opacity: 0; animation: fadeUp 0.7s ease 0.5s forwards;
+      position: relative; z-index: 1; margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 520px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.65s forwards;
+      position: relative; z-index: 1;
+    }
+
+    /* ── Chiffres complets ── */
+    .stats-full { background: var(--surface); }
+    .stats-full h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .stat-item {
+      background: var(--card); padding: 52px 40px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      position: relative;
+    }
+    .stat-item:hover { border-top-color: var(--red); background: var(--paper); }
+    .stat-item.highlight { border-top-color: var(--mustard); background: rgba(212,144,10,0.06); }
+    .stat-num {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 5vw, 5.2rem);
+      color: var(--dark); line-height: 1; display: block;
+      letter-spacing: -0.02em;
+    }
+    .stat-item.highlight .stat-num { color: var(--mustard); }
+    .stat-lbl {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); margin-top: 12px; display: block;
+    }
+    .stat-sub { font-size: 0.62rem; color: rgba(122,107,85,0.6); margin-top: 4px; }
+
+    /* ── Plateformes ── */
+    .platforms { background: var(--paper); }
+    .platforms h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px;
+    }
+    .platforms-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .platform-card {
+      background: var(--card); padding: 44px 32px;
+      text-align: center; position: relative;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .platform-card:hover { border-bottom-color: var(--red); background: var(--surface); }
+    .platform-icon { font-size: 2.2rem; display: block; margin-bottom: 16px; }
+    .platform-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1.2rem;
+      text-transform: uppercase; color: var(--dark); margin-bottom: 8px;
+    }
+    .platform-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── Contexte marché ── */
+    .market { background: var(--dark); position: relative; overflow: hidden; }
+    .market::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,196,0,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .market h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px; color: white;
+    }
+    .bar-list { display: flex; flex-direction: column; gap: 20px; max-width: 760px; }
+    .bar-item {
+      display: grid;
+      grid-template-columns: 180px 1fr 90px;
+      align-items: center; gap: 16px;
+    }
+    .bar-name { font-size: 0.82rem; color: rgba(255,255,255,0.45); text-align: right; }
+    .bar-name.rbqc { color: var(--amber); }
+    .bar-track { background: rgba(255,255,255,0.07); border-radius: 2px; height: 10px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 2px; background: rgba(255,255,255,0.2); width: 0; transition: width 1.4s cubic-bezier(.22,1,.36,1); }
+    .bar-fill.gold { background: var(--amber); }
+    .bar-fill.gold-dim { background: rgba(245,196,0,0.35); }
+    .bar-val {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1rem;
+      color: rgba(255,255,255,0.4); letter-spacing: 0.05em;
+    }
+    .bar-val.gold { color: var(--amber); }
+    .market-note { font-size: 0.7rem; color: rgba(255,255,255,0.2); margin-top: 32px; font-style: italic; max-width: 600px; }
+
+    /* ── Preuve sociale ── */
+    .proof { background: var(--surface); }
+    .proof h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px;
+    }
+    .proof-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .proof-context p {
+      font-size: 0.95rem; color: var(--muted);
+      line-height: 1.85; margin-bottom: 20px;
+    }
+    .proof-stat-row { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+    .proof-stat {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 18px 20px; background: var(--card);
+      border-left: 3px solid var(--mustard);
+    }
+    .proof-stat-num {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: 2.2rem;
+      color: var(--dark); line-height: 1; flex-shrink: 0;
+    }
+    .proof-stat-info { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .proof-stat-info strong { color: var(--dark); display: block; font-size: 0.9rem; margin-bottom: 2px; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--paper); padding: 120px 64px;
+      text-align: center; position: relative;
+      border-top: 2px solid var(--border);
+    }
+    .cta-label {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 20px;
+    }
+    .cta-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(3rem, 8vw, 8rem);
+      color: var(--dark); text-transform: uppercase;
+      line-height: 0.87; letter-spacing: -0.02em; margin-bottom: 52px;
+    }
+    .cta-sub { margin-top: 24px; font-size: 0.72rem; color: var(--muted); }
+
+    @media (max-width: 768px) {
+      .hero { padding: 96px 24px 52px; }
+      .hero-number { font-size: clamp(5rem, 22vw, 10rem); }
+      .stats-grid     { grid-template-columns: repeat(2, 1fr); }
+      .stat-item      { padding: 36px 24px; }
+      .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .platform-card  { padding: 32px 20px; }
+      .proof-layout   { grid-template-columns: 1fr; gap: 40px; }
+      .bar-list       { max-width: 100%; }
+      .bar-item       { grid-template-columns: 90px 1fr 56px; gap: 8px; }
+      .bar-name       { font-size: 0.72rem; }
+      .bar-val        { font-size: 0.82rem; }
+      .cta-section    { padding: 72px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html">RB<span class="accent">QC</span></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html" class="active">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="nav-cta" href="contact.html">Travailler avec nous</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Travailler avec nous</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">RBQC · Résultats &amp; Preuves</div>
+  <div class="hero-number">72%</div>
+  <div class="hero-label">Taux de rétention moyen · Top Amérique du Nord</div>
+  <p class="hero-sub">Les chiffres ne mentent pas. Voici ce que RBQC a accompli — et ce que ça veut dire pour toi.</p>
+</section>
+
+<!-- CHIFFRES COMPLETS -->
+<section class="stats-full">
+  <div class="section-label reveal">Performance globale</div>
+  <h2 class="reveal">Les chiffres<br>depuis le lancement.</h2>
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num" data-target="28980000">0</span>
+      <span class="stat-lbl">Impressions totales</span>
+      <span class="stat-sub">3 marques · 12 mois</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.1s">
+      <span class="stat-num" data-target="398700">0</span>
+      <span class="stat-lbl">Interactions</span>
+      <span class="stat-sub">likes, partages, commentaires</span>
+    </div>
+    <div class="stat-item highlight reveal" style="transition-delay:.2s">
+      <span class="stat-num">72%</span>
+      <span class="stat-lbl">Taux de rétention moyen</span>
+      <span class="stat-sub">les gens regardent jusqu'à la fin</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.3s">
+      <span class="stat-num" data-target="558000">0</span>
+      <span class="stat-lbl">Vues · Clip le plus performant</span>
+      <span class="stat-sub">un seul clip, une seule page</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.4s">
+      <span class="stat-num" data-target="13000">0</span>
+      <span class="stat-lbl">Abonnés combinés</span>
+      <span class="stat-sub">Facebook · TikTok · Instagram · YouTube</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.5s">
+      <span class="stat-num" data-target="1715">0</span>
+      <span class="stat-lbl">Publications totales</span>
+      <span class="stat-sub">tous réseaux confondus</span>
+    </div>
+  </div>
+</section>
+
+<!-- PLATEFORMES -->
+<section class="platforms">
+  <div class="section-label reveal">Distribution</div>
+  <h2 class="reveal">4 plateformes,<br>1 opération.</h2>
+  <div class="platforms-grid">
+    <div class="platform-card reveal">
+      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
+      <div class="platform-name">Facebook</div>
+      <p class="platform-desc"><strong style="color:var(--dark)">C'est là que ça se vend.</strong> 29M d'impressions, 398K interactions — Facebook génère le volume et convertit l'audience québécoise 35+ en acheteurs de billets.</p>
+    </div>
+    <div class="platform-card reveal" style="transition-delay:.1s">
+      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+      <div class="platform-name">TikTok</div>
+      <p class="platform-desc"><strong style="color:var(--dark)">C'est là que les leads se génèrent.</strong> Les 18–30 ans qui achètent des billets ne sont pas sur Facebook. Un clip peut exploser sans prévenir — et une seule vidéo virale change tout.</p>
+    </div>
+    <div class="platform-card reveal" style="transition-delay:.2s">
+      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
+      <div class="platform-name">Reels</div>
+      <p class="platform-desc"><strong style="color:var(--dark)">Double portée, même clip.</strong> Instagram Reels touche la même cible que TikTok avec l'avantage du réseau existant. Un seul fichier, deux algorithmes activés.</p>
+    </div>
+    <div class="platform-card reveal" style="transition-delay:.3s">
+      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+      <div class="platform-name">Shorts</div>
+      <p class="platform-desc"><strong style="color:var(--dark)">Le seul qui joue encore dans 6 mois.</strong> Facebook et TikTok meurent en 48h. Un Short accumule des vues pendant des mois — du contenu qui travaille pour toi en dormant.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXTE MARCHÉ -->
+<section class="market">
+  <div class="section-label light reveal">Contexte nord-américain</div>
+  <h2 class="reveal">Le clipping crée<br>des carrières.</h2>
+  <div class="bar-list reveal" id="barList">
+    <div class="bar-item">
+      <div class="bar-name">Flagrant (A. Schulz)</div>
+      <div class="bar-track"><div class="bar-fill" data-pct="100"></div></div>
+      <div class="bar-val">5,8 M</div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-name">Ryan Long</div>
+      <div class="bar-track"><div class="bar-fill" data-pct="69"></div></div>
+      <div class="bar-val">4 M</div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-name">Theo Von</div>
+      <div class="bar-track"><div class="bar-fill" data-pct="52"></div></div>
+      <div class="bar-val">3 M</div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-name">Mark Normand</div>
+      <div class="bar-track"><div class="bar-fill" data-pct="35"></div></div>
+      <div class="bar-val">2 M</div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-name rbqc">RBQC (actuel)</div>
+      <div class="bar-track"><div class="bar-fill gold-dim" data-pct="0.22"></div></div>
+      <div class="bar-val gold">13 K</div>
+    </div>
+    <div class="bar-item">
+      <div class="bar-name rbqc">RBQC (potentiel QC)</div>
+      <div class="bar-track"><div class="bar-fill gold" data-pct="17"></div></div>
+      <div class="bar-val gold">~1 M+</div>
+    </div>
+  </div>
+  <p class="market-note reveal">Ces comiques américains ont été bâtis quasi entièrement via le clipping court-format. Au Québec, ce marché est encore vierge. RBQC est en train de le construire — et tu peux en être le premier à en bénéficier.</p>
+</section>
+
+<!-- PREUVE SOCIALE -->
+<section class="proof">
+  <div class="section-label reveal">Preuve concrète</div>
+  <h2 class="reveal">Nos clips<br>vendent des billets.</h2>
+  <div class="proof-layout">
+    <div class="proof-context reveal">
+      <p>Ce message a été reçu directement dans notre boîte Messenger. Un fan qui avait découvert un clip sur notre page a pris contact pour acheter des billets — en demandant où et comment.</p>
+      <p>Ce n'est pas du trafic générique. C'est un acheteur concret qui n'aurait pas trouvé le show sans le clip. Un exemple parmi plusieurs depuis le lancement.</p>
+      <div class="proof-stat-row">
+        <div class="proof-stat">
+          <div class="proof-stat-num">7,55M</div>
+          <div class="proof-stat-info">
+            <strong>Impressions totales</strong>
+            Tous réseaux depuis le lancement
+          </div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">900K</div>
+          <div class="proof-stat-info">
+            <strong>Vues · Clip le plus performant</strong>
+            Un seul clip, un seul artiste
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="messenger-card">
+        <div class="messenger-header">
+          <div class="messenger-avatar">👤</div>
+          <div>
+            <div class="messenger-name">Fan — Messenger</div>
+            <div class="messenger-sub">Via la page Facebook RBQC · Message entrant</div>
+          </div>
+        </div>
+        <div class="messenger-body">
+          <div class="msg-date">2025-12-21 · 17 h 57</div>
+          <div class="msg-row received">
+            <div class="msg-avatar-sm">👤</div>
+            <div class="msg-bubble received">Salut comment qu'on fait acheter des billets pour ton show</div>
+          </div>
+          <div class="msg-date">2025-12-22 · 08 h 17</div>
+          <div class="msg-row received">
+            <div class="msg-avatar-sm">👤</div>
+            <div class="msg-bubble received">Jaimerais vraiment venir</div>
+          </div>
+          <div class="msg-row received">
+            <div class="msg-avatar-sm" style="visibility:hidden"></div>
+            <div class="msg-bubble received">100$ le billet?</div>
+          </div>
+          <div class="msg-date">2025-12-22 · 10 h 32</div>
+          <div class="msg-row sent">
+            <div class="msg-bubble sent">Salut, regardes sur sousecoute.com 🙂</div>
+          </div>
+          <div class="msg-row sent">
+            <div class="msg-link-preview">
+              <strong>sousecoute.com</strong>
+              sousecoute.com
+            </div>
+          </div>
+        </div>
+        <div class="messenger-footer">💡 Fan converti en acheteur potentiel grâce à un clip RBQC.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-label reveal">Convaincu ?</p>
+  <h2 class="cta-title reveal">Parlons<br>de ton projet.</h2>
+  <a class="btn-primary reveal" href="contact.html">Contacter RBQC</a>
+  <p class="cta-sub reveal">contact@rbqc.ca · Réponse en moins de 24 h</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">RBQC</a>
+  <ul class="footer-nav">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 RBQC — Tous droits réservés</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function fmt(n) {
+  if (n >= 1e6) return (n/1e6).toFixed(2).replace('.', ',') + ' M';
+  if (n >= 1e3) return Math.round(n/1e3) + ' K+';
+  return n.toLocaleString('fr-CA');
+}
+const co = new IntersectionObserver(e => {
+  e.forEach(x => {
+    if (!x.isIntersecting) return;
+    const el = x.target, t = parseInt(el.dataset.target, 10);
+    if (!t) return;
+    let cur = 0;
+    const inc = t / (1800 / 16);
+    const timer = setInterval(() => {
+      cur += inc;
+      if (cur >= t) { cur = t; clearInterval(timer); }
+      el.textContent = fmt(Math.floor(cur));
+    }, 16);
+    co.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => co.observe(el));
+
+const barObs = new IntersectionObserver(e => {
+  e.forEach(x => {
+    if (!x.isIntersecting) return;
+    x.target.querySelectorAll('.bar-fill').forEach(b => {
+      b.style.width = parseFloat(b.dataset.pct) + '%';
+    });
+    barObs.unobserve(x.target);
+  });
+}, { threshold: 0.3 });
+const bl = document.getElementById('barList');
+if (bl) barObs.observe(bl);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+const hamburger = document.querySelector('.nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile');
+hamburger?.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && hamburger?.classList.contains('open')) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+
+</script>
+
+</body>
+</html>

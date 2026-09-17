@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RBQC — Clipping &amp; Distribution · Humour Québécois</title>
+  <meta name="description" content="RBQC transforme tes podcasts, shows et lives en clips courts viraux distribués sur TikTok, Reels, Facebook et YouTube Shorts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="RBQC — Clipping & Distribution · Humour Québécois">
+  <meta property="og:description" content="Podcasts, shows et lives transformés en clips courts viraux. 29M d'impressions, 398K interactions. 3 formules sans risque sur TikTok, Reels, Facebook et YouTube Shorts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rbqc.ca">
+  <meta property="og:site_name" content="RBQC">
+  <meta property="og:image" content="https://rbqc.ca/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RBQC — Clipping & Distribution · Humour Québécois">
+  <meta name="twitter:description" content="Podcasts, shows et lives transformés en clips courts viraux. 29M d'impressions, 398K interactions. 3 formules sans risque sur TikTok, Reels, Facebook et YouTube Shorts.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Hero ── */
+    .hero {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 140px 64px 100px;
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    /* Spotlight gauche (ambre) */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-65%);
+      width: 700px; height: 110%;
+      background: radial-gradient(ellipse 40% 70% at 50% -5%, rgba(245,196,0,0.22) 0%, rgba(212,144,10,0.09) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    /* Spotlight droite (rouge) */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: -5%;
+      width: 600px; height: 110%;
+      background: radial-gradient(ellipse 40% 65% at 50% -5%, rgba(200,53,26,0.16) 0%, rgba(200,53,26,0.05) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px; height: 2px;
+      background: var(--red);
+      display: block; flex-shrink: 0;
+    }
+    .hero-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(4.5rem, 11vw, 12rem);
+      text-transform: uppercase;
+      line-height: 0.87;
+      letter-spacing: -0.02em;
+      color: var(--dark);
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.38s forwards;
+      margin-bottom: 36px;
+      position: relative; z-index: 1;
+    }
+    .hero-title .accent-red    { color: var(--red); }
+    .hero-title .accent-mustard{ color: var(--mustard); }
+    .hero-subtitle {
+      max-width: 560px;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.55s forwards;
+      position: relative; z-index: 1;
+    }
+    .hero-cta-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.72s forwards;
+      position: relative; z-index: 1;
+    }
+    .hero-platforms {
+      position: absolute;
+      bottom: 44px;
+      right: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1s forwards;
+    }
+    .hero-platforms-label {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero-platforms-list {
+      display: flex;
+      gap: 10px;
+    }
+    .platform-pill {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      background: rgba(247,241,230,0.8);
+    }
+
+    /* ── Stats ── */
+    .stats {
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,196,0,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07);
+      margin-top: 56px;
+    }
+    .stat-item {
+      background: var(--dark);
+      padding: 52px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .stat-item:hover { background: #241a0d; }
+    .stat-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--mustard);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .stat-item:hover::before { transform: scaleX(1); }
+    .stat-item.featured {
+      background: rgba(212,144,10,0.1);
+      border-top: 3px solid var(--mustard);
+    }
+    .stat-item.featured::before { display: none; }
+    .stat-number {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 5vw, 5.2rem);
+      color: var(--amber);
+      line-height: 1;
+      display: block;
+      letter-spacing: -0.02em;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 12px;
+      display: block;
+    }
+    .stat-sublabel { font-size: 0.62rem; color: rgba(255,255,255,0.2); margin-top: 4px; }
+
+    /* ── En moyenne ── */
+    .averages { background: var(--paper); }
+    .averages h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2rem, 4vw, 4rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 12px;
+    }
+    .averages-intro {
+      font-size: 0.95rem; color: var(--muted);
+      max-width: 560px; line-height: 1.7; margin-bottom: 56px;
+    }
+    .avg-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); margin-bottom: 28px;
+    }
+    .avg-card {
+      background: var(--card); padding: 44px 36px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .avg-card:hover { border-top-color: var(--red); background: var(--surface); }
+    .avg-card.strong { background: var(--dark); border-top-color: var(--mustard); }
+    .avg-platform {
+      font-size: 0.62rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 20px; display: block;
+    }
+    .avg-card.strong .avg-platform { color: rgba(255,255,255,0.35); }
+    .avg-number {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+      color: var(--dark); line-height: 1; display: block;
+      letter-spacing: -0.02em; margin-bottom: 6px;
+    }
+    .avg-card.strong .avg-number { color: var(--amber); }
+    .avg-unit {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); display: block; margin-bottom: 20px;
+    }
+    .avg-card.strong .avg-unit { color: rgba(255,255,255,0.35); }
+    .avg-detail { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+    .avg-card.strong .avg-detail { color: rgba(255,255,255,0.45); }
+    .avg-detail strong { color: var(--dark); }
+    .avg-card.strong .avg-detail strong { color: rgba(255,255,255,0.8); }
+    .avg-disclaimer {
+      font-size: 0.78rem; color: var(--muted);
+      font-style: italic; line-height: 1.6;
+      padding: 0 4px;
+    }
+    .avg-statement {
+      background: var(--dark);
+      padding: 36px 44px;
+      border-left: 4px solid var(--red);
+      margin-top: 8px;
+    }
+    .avg-statement-label {
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      display: block; margin-bottom: 14px;
+    }
+    .avg-statement-value {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(1.4rem, 3vw, 2.6rem);
+      text-transform: uppercase; letter-spacing: -0.01em;
+      color: white; line-height: 1.05;
+    }
+    .avg-statement-value em {
+      color: var(--amber); font-style: normal;
+    }
+    @media (max-width: 768px) { .avg-grid { grid-template-columns: 1fr; } }
+
+    /* ── Service buttons ── */
+    .service-btn {
+      display: block;
+      margin-top: auto;
+      padding-top: 28px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 0.88rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--dark); text-decoration: none;
+      border: 2px solid var(--dark);
+      padding: 12px 22px;
+      transition: background 0.2s, color 0.2s;
+      width: 100%; text-align: center;
+    }
+    .service-btn:hover { background: var(--dark); color: var(--paper); }
+    .service-btn-featured {
+      background: white; color: var(--dark);
+      border-color: white;
+    }
+    .service-btn-featured:hover { background: var(--paper); border-color: var(--paper); color: var(--dark); }
+
+    /* ── Services CTA strip ── */
+    .services-cta-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      background: var(--dark);
+      padding: 32px 44px;
+      margin-top: 2px;
+      flex-wrap: wrap;
+    }
+    .services-cta-strip-text { display: flex; flex-direction: column; gap: 4px; }
+    .services-cta-strip-label {
+      font-size: 0.62rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+    .services-cta-strip-value {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: clamp(1rem, 2vw, 1.4rem);
+      text-transform: uppercase; letter-spacing: -0.01em;
+      color: white; line-height: 1.1;
+    }
+    @media (max-width: 768px) {
+      .services-cta-strip { padding: 28px 24px; }
+      .services-cta-strip .btn-primary { width: 100%; text-align: center; }
+    }
+
+    /* ── Services preview ── */
+    .services { background: var(--surface); }
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .services-header h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: var(--dark);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .service-card {
+      background: var(--card);
+      padding: 56px 44px;
+      position: relative;
+      transition: background 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card:hover { background: var(--paper); }
+    .service-card.featured { background: var(--red); }
+    .service-card.featured:hover { background: #A82D16; }
+    .service-num {
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 32px;
+    }
+    .service-card.featured .service-num { color: rgba(255,255,255,0.4); }
+    .service-price {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+      line-height: 0.88;
+      color: var(--dark);
+      display: block;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .service-card.featured .service-price { color: white; }
+    .service-unit {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 24px;
+    }
+    .service-card.featured .service-unit { color: rgba(255,255,255,0.55); }
+    .service-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .service-card.featured .service-name { color: white; }
+    .service-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.75; flex: 1; }
+    .service-card.featured .service-desc { color: rgba(255,255,255,0.7); }
+    .service-tag {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      color: var(--muted);
+    }
+    .service-card.featured .service-tag {
+      border-color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── Pourquoi ── */
+    .why { background: var(--paper); }
+    .why h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-bottom: 64px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .why-item {
+      background: var(--card);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .why-item:hover { border-top-color: var(--red); background: var(--surface); }
+    .why-item::after {
+      content: attr(data-n);
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 6rem;
+      color: rgba(26,18,9,0.04);
+      position: absolute;
+      bottom: 10px; right: 16px;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .why-icon { font-size: 2rem; display: block; margin-bottom: 20px; }
+    .why-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .why-text { font-size: 0.88rem; color: var(--muted); line-height: 1.8; }
+    .why-conclusion {
+      margin-top: 40px;
+      padding: 28px 40px;
+      background: var(--dark);
+      color: var(--amber);
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      border-left: 4px solid var(--red);
+    }
+
+    /* ── Proof ── */
+    .proof {
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .proof::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,53,26,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      margin-top: 56px;
+      align-items: center;
+    }
+    .proof-text p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .proof-highlight {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(212,144,10,0.1);
+      border: 1px solid rgba(212,144,10,0.3);
+      padding: 18px 20px;
+      font-size: 0.88rem;
+      color: var(--amber);
+      margin-top: 12px;
+      line-height: 1.55;
+    }
+    .proof-highlight::before { content: '→'; font-weight: 700; flex-shrink: 0; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--mustard);
+      padding: 120px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: 'RBQC';
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 32vw;
+      color: rgba(0,0,0,0.055);
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      white-space: nowrap;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .cta-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.45);
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .cta-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 9vw, 9rem);
+      color: var(--dark);
+      text-transform: uppercase;
+      line-height: 0.87;
+      letter-spacing: -0.02em;
+      margin-bottom: 52px;
+      position: relative;
+    }
+    .cta-sub { margin-top: 24px; font-size: 0.72rem; color: rgba(0,0,0,0.38); position: relative; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero { padding: 96px 24px 60px; }
+      .hero-platforms { display: none; }
+      .hero-title { font-size: clamp(3.5rem, 12vw, 8rem); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .proof-grid { grid-template-columns: 1fr; gap: 40px; }
+      .cta-section { padding: 80px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html">RB<span class="accent">QC</span></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="nav-cta" href="contact.html">Travailler avec nous</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Travailler avec nous</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Rires Bruts Québec · Clipping &amp; Distribution</div>
+  <h1 class="hero-title">
+    Ton contenu<br>
+    <span class="accent-red">mérite</span><br>
+    d'être vu.
+  </h1>
+  <p class="hero-subtitle">
+    Podcasts, shows, lives et capsules transformés en clips courts viraux. Distribués sur TikTok, Reels, Facebook et YouTube Shorts — automatiquement.
+  </p>
+  <div class="hero-cta-row">
+    <a class="btn-primary" href="contact.html">Discuter d'une collab</a>
+    <a class="btn-ghost" href="services.html">Voir les formules →</a>
+  </div>
+  <div class="hero-platforms">
+    <span class="hero-platforms-label">Distribution sur</span>
+    <div class="hero-platforms-list">
+      <span class="platform-pill">TikTok</span>
+      <span class="platform-pill">Reels</span>
+      <span class="platform-pill">Facebook</span>
+      <span class="platform-pill">Shorts</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="section-label light reveal">Chiffres clés</div>
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-number" data-target="28980000">0</span>
+      <span class="stat-label">Impressions totales</span>
+      <span class="stat-sublabel">3 marques · 12 mois</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.1s">
+      <span class="stat-number" data-target="398700">0</span>
+      <span class="stat-label">Interactions</span>
+      <span class="stat-sublabel">likes, partages, commentaires</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.2s">
+      <span class="stat-number" data-target="558000">0</span>
+      <span class="stat-label">Vues · Clip le plus performant</span>
+      <span class="stat-sublabel">un seul clip, une seule page</span>
+    </div>
+    <div class="stat-item featured reveal" style="transition-delay:.3s">
+      <span class="stat-number">72%</span>
+      <span class="stat-label">Taux de rétention moyen</span>
+      <span class="stat-sublabel">les gens regardent jusqu'à la fin</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.4s">
+      <span class="stat-number" data-target="13000">0</span>
+      <span class="stat-label">Abonnés combinés</span>
+      <span class="stat-sublabel">Facebook · TikTok · Instagram · YouTube</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.5s">
+      <span class="stat-number" data-target="1715">0</span>
+      <span class="stat-label">Publications totales</span>
+      <span class="stat-sublabel">tous réseaux confondus</span>
+    </div>
+  </div>
+</section>
+
+<!-- EN MOYENNE -->
+<section class="averages">
+  <div class="section-label reveal">Par publication · Moyennes réelles</div>
+  <h2 class="reveal">Ce que génère<br>un clip, en pratique.</h2>
+  <p class="averages-intro reveal">Les gros chiffres cumulatifs, c'est bien. Mais voilà ce qu'une publication génère concrètement — par plateforme, sur 1 715 posts analysés.</p>
+  <div class="avg-grid">
+    <div class="avg-card strong reveal">
+      <span class="avg-platform">Facebook · 467 posts</span>
+      <span class="avg-number">36K</span>
+      <span class="avg-unit">impressions · médiane par post</span>
+      <p class="avg-detail"><strong>70% des posts dépassent 10K vues.</strong> Facebook est la plateforme qui livre le volume de façon consistante — c'est là que l'audience québécoise est la plus active et la plus convertible.</p>
+    </div>
+    <div class="avg-card reveal" style="transition-delay:.1s">
+      <span class="avg-platform">TikTok + Reels · 812 posts</span>
+      <span class="avg-number">31%</span>
+      <span class="avg-unit">des clips dépassent 1 000 vues</span>
+      <p class="avg-detail"><strong>Deux algorithmes, une seule opération.</strong> 812 clips publiés sur TikTok et Instagram Reels — 31% passent le cap des 1K vues. C'est là que les 18–30 ans qui achètent des billets vous découvrent.</p>
+    </div>
+    <div class="avg-card reveal" style="transition-delay:.2s">
+      <span class="avg-platform">YouTube Shorts · 436 posts</span>
+      <span class="avg-number">436</span>
+      <span class="avg-unit">Shorts evergreen en ligne</span>
+      <p class="avg-detail"><strong>Un Short accumule des vues pendant des mois.</strong> Le contenu evergreen continue de travailler longtemps après sa publication — chaque clip posté est un actif qui grossit avec le temps.</p>
+    </div>
+  </div>
+  <p class="avg-disclaimer reveal">Toutes les publications ne performent pas de la même façon — c'est le principe même de l'algorithme.</p>
+  <div class="avg-statement reveal">
+    <span class="avg-statement-label">Ce qu'on contrôle</span>
+    <div class="avg-statement-value">Faire percer tes vidéos sur une des <em>12 plateformes RBQC.</em></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-label reveal">L'offre</div>
+  <div class="services-header">
+    <h2 class="reveal">Trois façons<br>de travailler<br>ensemble.</h2>
+    <a class="btn-ghost reveal" href="services.html">Voir le détail complet →</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01 / Clipping</span>
+      <span class="service-price">2$</span>
+      <span class="service-unit">par clip</span>
+      <div class="service-name">Clipping à la pièce</div>
+      <p class="service-desc">Montage court-format optimisé pour chaque plateforme. Sous-titres animés, format vertical, hooks algorithmiques.</p>
+      <a class="service-btn" href="mailto:contact@rbqc.ca?subject=Formule Clipping RBQC">Démarrer · 2$/clip →</a>
+    </div>
+    <div class="service-card featured reveal" style="transition-delay:.1s">
+      <span class="service-num">02 / Distribution</span>
+      <span class="service-price">0,50$</span>
+      <span class="service-unit">par 1 000 vues</span>
+      <div class="service-name">Pay-for-performance</div>
+      <p class="service-desc">Tu paies uniquement ce qui performe. Distribution simultanée sur TikTok, Reels, Facebook et Shorts.</p>
+      <a class="service-btn service-btn-featured" href="mailto:contact@rbqc.ca?subject=Formule Distribution RBQC">Choisir cette formule →</a>
+    </div>
+    <div class="service-card reveal" style="transition-delay:.2s">
+      <span class="service-num">03 / Commission</span>
+      <span class="service-price">10%</span>
+      <span class="service-unit">par billet vendu</span>
+      <div class="service-name">Risque partagé</div>
+      <p class="service-desc">Code promo ou lien tracké exclusif. Tu ne paies que sur les billets que RBQC génère directement.</p>
+      <a class="service-btn" href="mailto:contact@rbqc.ca?subject=Formule Commission RBQC">Démarrer sans risque →</a>
+    </div>
+  </div>
+
+  <!-- CTA sous tableau -->
+  <div class="services-cta-strip">
+    <div class="services-cta-strip-text">
+      <span class="services-cta-strip-label">Pas sûr de quelle formule choisir ?</span>
+      <span class="services-cta-strip-value">On vous aide à trouver ce qui vous convient — sans engagement.</span>
+    </div>
+    <a class="btn-primary" href="mailto:contact@rbqc.ca?subject=Collaboration RBQC">Nous écrire →</a>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why">
+  <div class="section-label reveal">Pourquoi RBQC</div>
+  <h2 class="reveal">Un clip.<br>Quatre fronts.</h2>
+  <div class="why-grid">
+    <div class="why-item reveal" data-n="01">
+      <span class="why-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+      <div class="why-title">Facebook livre la preuve</div>
+      <p class="why-text">Ton audience québécoise est là. 29M d'impressions, 398K interactions, les tops clips à 500K+ vues sur les 6 derniers mois — c'est Facebook qui génère le volume. C'est là que ça se vend aujourd'hui.</p>
+    </div>
+    <div class="why-item reveal" data-n="02" style="transition-delay:.1s">
+      <span class="why-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+      <div class="why-title">TikTok &amp; Reels atteignent ceux qui génèrent des leads</div>
+      <p class="why-text">Les 18–30 ans qui deviennent des leads ne sont pas sur Facebook. Un clip peut exploser sur TikTok sans prévenir, et une seule vidéo virale change tout. C'est le risque que tu ne peux pas te permettre de ne pas prendre.</p>
+    </div>
+    <div class="why-item reveal" data-n="03" style="transition-delay:.2s">
+      <span class="why-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+      <div class="why-title">YouTube Shorts jouent encore dans 6 mois</div>
+      <p class="why-text">Facebook et TikTok meurent en 48h. Un Short accumule des vues pendant des mois — c'est du contenu qui travaille pour toi en dormant. Un clip posté, quatre durées de vie différentes.</p>
+    </div>
+  </div>
+  <div class="why-conclusion reveal">
+    Un clip. Quatre plateformes. Chacune fait sa vraie valeur — pas juste poster, mais couvrir tous les fronts en même temps.
+  </div>
+</section>
+
+<!-- MINI-CTA -->
+<div style="background:var(--surface);padding:32px 64px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <p style="font-family:'Big Shoulders Display',sans-serif;font-weight:700;font-size:1.3rem;text-transform:uppercase;letter-spacing:-0.01em;color:var(--dark);">Prêt à couvrir tous les fronts ?</p>
+  <a class="btn-primary" href="contact.html" style="white-space:nowrap;">Discuter d'une collab →</a>
+</div>
+
+<!-- PREUVE -->
+<section class="proof">
+  <div class="section-label light reveal">Preuves concrètes</div>
+  <div class="proof-grid">
+    <div class="proof-text reveal">
+      <p>Un fan découvre un clip sur notre page, prend contact directement pour acheter des billets. Ce n'est pas du trafic générique — c'est un acheteur concret qui n'aurait jamais trouvé le show sans le clip.</p>
+      <p>Multiplie ça par des dizaines de clips par semaine, et tu comprends l'effet compound. Chaque show est une mine de contenu. Chaque clip est une occasion de vendre un billet.</p>
+      <div class="proof-highlight">Un clip bien placé = un acheteur de billet qui n'aurait pas existé autrement.</div>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="messenger-card">
+        <div class="messenger-header">
+          <div class="messenger-avatar">👤</div>
+          <div>
+            <div class="messenger-name">Fan — Messenger</div>
+            <div class="messenger-sub">Via la page Facebook RBQC</div>
+          </div>
+        </div>
+        <div class="messenger-body">
+          <div class="msg-date">2025-12-21 · 17 h 57</div>
+          <div class="msg-row received">
+            <div class="msg-avatar-sm">👤</div>
+            <div class="msg-bubble received">Salut comment qu'on fait acheter des billets pour ton show</div>
+          </div>
+          <div class="msg-date">2025-12-22 · 08 h 17</div>
+          <div class="msg-row received">
+            <div class="msg-avatar-sm">👤</div>
+            <div class="msg-bubble received">Jaimerais vraiment venir</div>
+          </div>
+          <div class="msg-row received">
+            <div class="msg-avatar-sm" style="visibility:hidden"></div>
+            <div class="msg-bubble received">100$ le billet?</div>
+          </div>
+          <div class="msg-date">2025-12-22 · 10 h 32</div>
+          <div class="msg-row sent">
+            <div class="msg-bubble sent">Salut, regardes sur sousecoute.com 🙂</div>
+          </div>
+          <div class="msg-row sent">
+            <div class="msg-link-preview">
+              <strong>sousecoute.com</strong>
+              sousecoute.com
+            </div>
+          </div>
+        </div>
+        <div class="messenger-footer">💡 Fan converti en acheteur via un clip RBQC.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-label reveal">Prêt à collaborer ?</p>
+  <h2 class="cta-title reveal">Travaillons<br>ensemble.</h2>
+  <a class="btn-dark reveal" href="contact.html">Travailler avec RBQC</a>
+  <p class="cta-sub reveal">contact@rbqc.ca</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">RBQC</a>
+  <ul class="footer-nav">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 RBQC — Tous droits réservés</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function fmt(n) {
+  if (n >= 1e6) return (n/1e6).toFixed(2).replace('.', ',') + ' M';
+  if (n >= 1e3) return Math.round(n/1e3) + ' K+';
+  return n.toLocaleString('fr-CA');
+}
+const co = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, t = parseInt(el.dataset.target, 10);
+    if (!t) return;
+    let cur = 0;
+    const inc = t / (1800 / 16);
+    const timer = setInterval(() => {
+      cur += inc;
+      if (cur >= t) { cur = t; clearInterval(timer); }
+      el.textContent = fmt(Math.floor(cur));
+    }, 16);
+    co.unobserve(el);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => co.observe(el));
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+const hamburger = document.querySelector('.nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile');
+hamburger?.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && hamburger?.classList.contains('open')) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+
+</script>
+
+</body>
+</html>

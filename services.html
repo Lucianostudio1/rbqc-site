@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — RBQC · Clipping &amp; Distribution</title>
+  <meta name="description" content="Trois formules de clipping et distribution : à la pièce, pay-for-performance et commission sur billets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Services — RBQC · 3 formules de clipping">
+  <meta property="og:description" content="Clipping à 2$/clip, pay-for-performance à 0,50$/1K vues, ou commission 10% sur billets vendus. Zéro risque, résultats mesurables.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rbqc.ca/services.html">
+  <meta property="og:site_name" content="RBQC">
+  <meta property="og:image" content="https://rbqc.ca/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services — RBQC · 3 formules de clipping">
+  <meta name="twitter:description" content="Clipping à 2$/clip, pay-for-performance à 0,50$/1K vues, ou commission 10% sur billets vendus. Zéro risque, résultats mesurables.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Hero ── */
+    .hero {
+      min-height: 55vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 140px 64px 80px;
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 55%; height: 100%;
+      background: radial-gradient(ellipse 50% 60% at 80% -5%, rgba(200,53,26,0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 24px;
+      display: flex; align-items: center; gap: 14px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.2s forwards;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 22px; height: 2px;
+      background: var(--red); display: block; flex-shrink: 0;
+    }
+    .hero-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 9vw, 9rem);
+      text-transform: uppercase;
+      line-height: 0.88; letter-spacing: -0.02em;
+      color: var(--dark);
+      opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards;
+      margin-bottom: 24px; position: relative; z-index: 1;
+    }
+    .hero-title .accent { color: var(--red); }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--muted); line-height: 1.7; max-width: 520px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.5s forwards;
+    }
+
+    /* ── Formules ── */
+    .formules { background: var(--surface); }
+    .formules h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px;
+    }
+    .formules-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .formule-card {
+      background: var(--card);
+      padding: 60px 44px 48px;
+      position: relative;
+      border-top: 4px solid transparent;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .formule-card:hover { background: var(--paper); border-top-color: var(--red); }
+    .formule-card.best {
+      background: var(--dark);
+      border-top-color: var(--mustard);
+      color: white;
+    }
+    .formule-card.best:hover { background: var(--ink); }
+    .formule-badge {
+      display: inline-block;
+      font-size: 0.58rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      background: var(--mustard); color: var(--dark);
+      padding: 4px 12px; margin-bottom: 24px;
+    }
+    .formule-num {
+      font-size: 0.6rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--muted);
+      display: block; margin-bottom: 28px;
+    }
+    .formule-card.best .formule-num { color: rgba(255,255,255,0.35); }
+    .formule-price {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: clamp(4rem, 6vw, 7rem);
+      line-height: 0.87; letter-spacing: -0.03em;
+      color: var(--dark); display: block; margin-bottom: 6px;
+    }
+    .formule-card.best .formule-price { color: var(--amber); }
+    .formule-unit {
+      font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--muted);
+      display: block; margin-bottom: 32px;
+    }
+    .formule-card.best .formule-unit { color: rgba(255,255,255,0.4); }
+    .formule-name {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1.3rem;
+      text-transform: uppercase; color: var(--dark); margin-bottom: 16px;
+    }
+    .formule-card.best .formule-name { color: white; }
+    .formule-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 32px; }
+    .formule-card.best .formule-desc { color: rgba(255,255,255,0.55); }
+    .formule-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .formule-card.best .formule-list { border-top-color: rgba(255,255,255,0.1); }
+    .formule-list li {
+      font-size: 0.84rem; color: var(--muted);
+      padding-left: 20px; position: relative; line-height: 1.5;
+    }
+    .formule-list li::before {
+      content: '✓'; position: absolute; left: 0;
+      color: var(--red); font-weight: 700; font-size: 0.8rem;
+    }
+    .formule-card.best .formule-list li { color: rgba(255,255,255,0.5); }
+    .formule-card.best .formule-list li::before { color: var(--amber); }
+
+    /* ── Comment ça marche ── */
+    .how { background: var(--paper); }
+    .how h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px;
+    }
+    .steps {
+      display: flex; flex-direction: column;
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .step {
+      background: var(--card);
+      padding: 40px 48px;
+      display: grid;
+      grid-template-columns: 72px 1fr 48px;
+      align-items: center; gap: 36px;
+      transition: background 0.3s;
+    }
+    .step:hover { background: var(--surface); }
+    .step-num {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: 3rem;
+      color: rgba(26,18,9,0.1); line-height: 1; text-align: center;
+    }
+    .step-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1.15rem;
+      text-transform: uppercase; color: var(--dark); margin-bottom: 6px;
+    }
+    .step-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+    .step-arrow { color: var(--red); font-size: 1.4rem; text-align: right; }
+
+    /* ── Comparaison ── */
+    .compare { background: var(--dark); }
+    .compare h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px; color: white;
+    }
+    .compare-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07); margin-bottom: 60px;
+    }
+    .compare-col {
+      background: var(--dark); padding: 52px 44px;
+    }
+    .compare-col.ours {
+      background: rgba(212,144,10,0.08);
+      border-top: 3px solid var(--mustard);
+    }
+    .compare-flag {
+      font-size: 0.62rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3);
+      margin-bottom: 28px; display: flex;
+      align-items: center; gap: 10px;
+    }
+    .compare-col.ours .compare-flag { color: var(--amber); }
+    .flag-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .flag-dot.other { background: #555; }
+    .flag-dot.rbqc { background: var(--mustard); box-shadow: 0 0 8px var(--mustard); animation: pulse 2s ease infinite; }
+    .compare-heading {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.5rem);
+      text-transform: uppercase; line-height: 1;
+      color: rgba(255,255,255,0.85); margin-bottom: 28px;
+    }
+    .compare-col.ours .compare-heading { color: var(--amber); }
+    .compare-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .compare-list li {
+      font-size: 0.88rem; color: rgba(255,255,255,0.45);
+      padding-left: 24px; position: relative; line-height: 1.6;
+    }
+    .compare-list li::before { content: '—'; position: absolute; left: 0; top: 1px; color: rgba(255,255,255,0.2); }
+    .compare-col.ours .compare-list li::before { content: '✓'; color: var(--amber); font-weight: 700; }
+    .compare-list li strong { color: rgba(255,255,255,0.8); }
+
+    /* ── FAQ ── */
+    .faq { background: var(--surface); }
+    .faq h2 {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 5vw, 4.5rem);
+      text-transform: uppercase; line-height: 0.9;
+      letter-spacing: -0.02em; margin-bottom: 64px;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item {
+      background: var(--card); border-left: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .faq-item:hover { border-left-color: var(--red); background: var(--paper); }
+    .faq-q {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1.1rem;
+      text-transform: uppercase; color: var(--dark);
+      padding: 28px 36px; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 20px;
+    }
+    .faq-q::after { content: '+'; color: var(--red); font-size: 1.4rem; flex-shrink: 0; }
+    .faq-a {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.8;
+      padding: 0 36px 28px; display: none;
+    }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--red); padding: 120px 64px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: 'GO'; font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: 40vw;
+      color: rgba(0,0,0,0.07);
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none; white-space: nowrap; line-height: 1;
+    }
+    .cta-label {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 20px; position: relative;
+    }
+    .cta-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(3.5rem, 9vw, 9rem);
+      color: white; text-transform: uppercase;
+      line-height: 0.87; letter-spacing: -0.02em;
+      margin-bottom: 52px; position: relative;
+    }
+    .cta-sub { margin-top: 24px; font-size: 0.72rem; color: rgba(255,255,255,0.4); position: relative; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 96px 24px 52px; }
+      .hero-title { font-size: clamp(2.8rem, 10vw, 5rem); }
+      .formules-grid { grid-template-columns: 1fr; }
+      .formule-card { padding: 40px 28px 36px; }
+      .formule-price { font-size: clamp(3rem, 12vw, 5rem); }
+      .compare-grid  { grid-template-columns: 1fr; }
+      .compare-col   { padding: 36px 28px; }
+      .step { grid-template-columns: 48px 1fr; gap: 20px; padding: 28px 24px; }
+      .step-arrow { display: none; }
+      .faq-q { padding: 22px 24px; font-size: 0.95rem; }
+      .faq-a { padding: 0 24px 22px; }
+      .cta-section { padding: 72px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html">RB<span class="accent">QC</span></a>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="nav-cta" href="contact.html">Travailler avec nous</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Travailler avec nous</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">RBQC · Services &amp; Tarification</div>
+  <h1 class="hero-title">Trois formules,<br><span class="accent">un seul</span><br>objectif.</h1>
+  <p class="hero-sub">Que tu veuilles tester, scaler ou éliminer tout risque — il y a une formule faite pour toi.</p>
+</section>
+
+<!-- FORMULES -->
+<section class="formules">
+  <div class="section-label reveal">L'offre complète</div>
+  <h2 class="reveal">Choisis<br>ta formule.</h2>
+  <div class="formules-grid">
+
+    <div class="formule-card reveal">
+      <span class="formule-num">01 / Clipping</span>
+      <span class="formule-price">2$</span>
+      <span class="formule-unit">par clip produit</span>
+      <div class="formule-name">Clipping à la pièce</div>
+      <p class="formule-desc">Idéal pour commencer ou commander ponctuellement. Tu commandes le nombre de clips que tu veux, tu paies à la livraison.</p>
+      <ul class="formule-list">
+        <li>Montage court-format (15–90 sec)</li>
+        <li>Sous-titres animés inclus</li>
+        <li>Format vertical optimisé</li>
+        <li>Hook personnalisé par plateforme</li>
+        <li>Livraison en 48–72 h</li>
+      </ul>
+    </div>
+
+    <div class="formule-card best reveal" style="transition-delay:.1s">
+      <div class="formule-badge">Meilleure valeur</div>
+      <span class="formule-num">02 / Distribution</span>
+      <span class="formule-price">0,50$</span>
+      <span class="formule-unit">par 1 000 vues générées</span>
+      <div class="formule-name">Pay-for-performance</div>
+      <p class="formule-desc">Tu ne paies que ce qui performe. RBQC clippe, distribue et optimise — tu paies uniquement sur les vues réelles générées.</p>
+      <ul class="formule-list">
+        <li>Clipping + distribution inclus</li>
+        <li>TikTok · Reels · Facebook · Shorts</li>
+        <li>Scheduling aux heures optimales</li>
+        <li>Rapport mensuel de performance</li>
+        <li>0$ si les clips ne performent pas</li>
+      </ul>
+    </div>
+
+    <div class="formule-card reveal" style="transition-delay:.2s">
+      <span class="formule-num">03 / Commission</span>
+      <span class="formule-price">10%</span>
+      <span class="formule-unit">par billet vendu via RBQC</span>
+      <div class="formule-name">Risque partagé</div>
+      <p class="formule-desc">Zéro déboursé de ta part. RBQC travaille avec un lien ou code promo tracké et touche uniquement sur les billets qu'on génère réellement.</p>
+      <ul class="formule-list">
+        <li>Lien ou code promo tracké</li>
+        <li>Clipping + distribution inclus</li>
+        <li>Rapport de conversions mensuel</li>
+        <li>Résiliation possible en tout temps</li>
+        <li>Tu ne paies que si ça vend</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section class="how">
+  <div class="section-label reveal">Le processus</div>
+  <h2 class="reveal">De ton show<br>à 4 plateformes<br>en automatique.</h2>
+  <div class="steps reveal">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div>
+        <div class="step-title">Tu envoies le fichier</div>
+        <div class="step-desc">Un spectacle complet, un épisode de podcast, un live ou une capsule. N'importe quel format — tu déposes dans un Dropbox ou Google Drive partagé, c'est tout.</div>
+      </div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div>
+        <div class="step-title">RBQC clippe &amp; optimise</div>
+        <div class="step-desc">Sélection des meilleurs moments, montage vertical, sous-titres animés, hooks adaptés à chaque plateforme. Curation humaine + outils IA.</div>
+      </div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div>
+        <div class="step-title">Publication sur 4 plateformes — chacune pour une raison</div>
+        <div class="step-desc"><strong>Facebook</strong> livre le volume et convertit l'audience 35+ en acheteurs. <strong>TikTok & Reels</strong> génèrent des leads chez les 18–30 ans que Facebook n'atteint pas. <strong>YouTube Shorts</strong> accumulent des vues pendant des mois pendant que les autres meurent en 48h.</div>
+      </div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div>
+        <div class="step-title">Tu reçois le rapport &amp; tu vends</div>
+        <div class="step-desc">Rapport mensuel : impressions, engagement, conversions trackées. En formule commission, tu vois exactement les billets générés par nos clips.</div>
+      </div>
+      <div class="step-arrow">✓</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARAISON -->
+<section class="compare">
+  <div class="section-label light reveal">Contexte de marché</div>
+  <h2 class="reveal">Pourquoi maintenant ?</h2>
+  <div class="compare-grid reveal">
+    <div class="compare-col">
+      <div class="compare-flag">
+        <span class="flag-dot other"></span>
+        Sans RBQC
+      </div>
+      <div class="compare-heading">Le statu quo</div>
+      <ul class="compare-list">
+        <li><strong>Contenu qui dort</strong> sur un disque dur après chaque show</li>
+        <li><strong>Zéro distribution</strong> court-format systématique</li>
+        <li><strong>Audience limitée</strong> aux fans qui te connaissent déjà</li>
+        <li><strong>Ventes de billets</strong> uniquement via promotion directe</li>
+        <li><strong>Montage et publication</strong> faits manuellement ou pas du tout</li>
+      </ul>
+    </div>
+    <div class="compare-col ours">
+      <div class="compare-flag">
+        <span class="flag-dot rbqc"></span>
+        Avec RBQC
+      </div>
+      <div class="compare-heading">L'avantage RBQC</div>
+      <ul class="compare-list">
+        <li><strong>Chaque show</strong> devient des semaines de contenu distribué</li>
+        <li><strong>4 plateformes</strong> atteintes simultanément, en automatique</li>
+        <li><strong>Nouvelle audience</strong> qui découvre ton travail organiquement</li>
+        <li><strong>Billets vendus</strong> à des gens qui n'auraient jamais entendu parler de toi</li>
+        <li><strong>Pipeline automatisé</strong> — tu n'as rien à faire après le dépôt</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-label reveal">Questions fréquentes</div>
+  <h2 class="reveal">T'as des<br>questions ?</h2>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false" aria-controls="faq-a-1" tabindex="0">Combien de clips peut-on produire par épisode ?</div>
+      <div class="faq-a" id="faq-a-1">Un spectacle de 60–90 minutes peut généralement donner entre 10 et 25 clips de qualité. Un épisode de podcast de 45 minutes produit typiquement 6–15 clips. On sélectionne les meilleurs moments pour maximiser l'engagement, pas juste le volume.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false" aria-controls="faq-a-2" tabindex="0">Est-ce que je garde tous les droits sur mon contenu ?</div>
+      <div class="faq-a" id="faq-a-2">Absolument. Tu es et restes propriétaire de ton contenu à 100%. RBQC agit uniquement comme partenaire de distribution. On n'utilise jamais ton contenu pour d'autres fins sans ton accord explicite.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false" aria-controls="faq-a-3" tabindex="0">Quel est le délai de livraison moyen ?</div>
+      <div class="faq-a" id="faq-a-3">Pour la formule clipping à la pièce : 48–72 h par lot. Pour les formules distribution et commission : on établit un calendrier de publication ensemble au démarrage. Les clips sont généralement prêts et programmés dans les 5 jours suivant la réception du fichier.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false" aria-controls="faq-a-4" tabindex="0">Comment fonctionne le tracking des billets vendus ?</div>
+      <div class="faq-a" id="faq-a-4">On crée un lien de tracking unique ou un code promo spécifique RBQC. Chaque vente passant par ce lien est attribuée directement à notre distribution. Tu reçois un rapport mensuel avec le nombre de clics et de conversions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" role="button" aria-expanded="false" aria-controls="faq-a-5" tabindex="0">Peut-on tester avec un seul épisode avant de s'engager ?</div>
+      <div class="faq-a" id="faq-a-5">Oui, c'est même ce qu'on recommande. La formule clipping à la pièce est parfaite pour tester sans engagement. Tu commandes un batch de clips sur un épisode, tu vois les résultats, et tu décides de la suite.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-label reveal">Prêt à démarrer ?</p>
+  <h2 class="cta-title reveal">Choisissons<br>ta formule.</h2>
+  <a class="btn-dark reveal" href="contact.html">Contacter RBQC</a>
+  <p class="cta-sub reveal">contact@rbqc.ca · Réponse en moins de 24 h</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">RBQC</a>
+  <ul class="footer-nav">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 RBQC — Tous droits réservés</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(q => {
+  const toggle = () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+      q.setAttribute('aria-expanded', 'true');
+    }
+  };
+  q.addEventListener('click', toggle);
+  q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+const hamburger = document.querySelector('.nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile');
+hamburger?.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && hamburger?.classList.contains('open')) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+
+</script>
+
+</body>
+</html>
