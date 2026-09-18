@@ -274,6 +274,8 @@ footer {
   color: rgba(255,255,255,0.28);
   text-decoration: none;
   transition: color 0.2s;
+  padding: 8px 4px;
+  display: inline-block;
 }
 .footer-nav a:hover { color: rgba(255,255,255,0.7); }
 .footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.18); }

@@ -247,7 +247,7 @@
     }
     .faq-q::after { content: '+'; color: var(--red); font-size: 1.4rem; flex-shrink: 0; }
     .faq-a {
-      font-size: 0.9rem; color: var(--muted); line-height: 1.8;
+      font-size: 1rem; color: var(--muted); line-height: 1.8;
       padding: 0 36px 28px; display: none;
     }
     .faq-item.open .faq-q::after { content: '−'; }

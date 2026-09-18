@@ -81,7 +81,7 @@
       display: flex; flex-direction: column; gap: 10px;
     }
     .article-content ul li {
-      font-size: 0.95rem; color: var(--muted);
+      font-size: 1rem; color: var(--muted);
       padding-left: 22px; position: relative; line-height: 1.7;
     }
     .article-content ul li::before {
