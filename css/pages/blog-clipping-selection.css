@@ -1,0 +1,122 @@
+/* ══════════════════════════════════════════════════════
+   RBQC — blog/comment-choisir-moments-clipper-spectacle-humour.html
+   ─────────────────────────────────────────────────────
+   Sections :
+     1. Hero + back-link + meta
+     2. Article body (h2, p, a)
+     3. Criteria list numérotée
+     4. FAQ accordéon
+     5. Related box
+     6. CTA section
+     7. @media ≤ 768px
+   ══════════════════════════════════════════════════════ */
+
+    .hero {
+      min-height: 46vh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 140px 64px 72px; position: relative; overflow: hidden;
+      background: var(--paper);
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 55%; height: 100%;
+      background: radial-gradient(ellipse 50% 60% at 80% -5%, rgba(200,53,26,0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .back-link {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      display: inline-block; margin-bottom: 28px; position: relative;
+    }
+    .back-link:hover { color: var(--red); }
+    .hero-eyebrow {
+      font-size: 0.7rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 24px; display: flex; align-items: center; gap: 14px;
+    }
+    .hero-eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--red); display: block; flex-shrink: 0; }
+    .hero-title {
+      font-family: 'Big Shoulders Display', sans-serif; font-weight: 900;
+      font-size: clamp(2.6rem, 6vw, 5rem); text-transform: none;
+      line-height: 0.98; letter-spacing: -0.01em; color: var(--dark);
+      margin-bottom: 22px; max-width: 900px;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.6vw, 1.15rem); color: var(--muted);
+      line-height: 1.7; max-width: 560px; margin-bottom: 20px;
+    }
+    .article-meta { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+    .article-meta .dot { margin: 0 8px; opacity: 0.5; }
+
+    .article-body { max-width: 720px; margin: 0 auto; padding: 90px 24px 40px; }
+    .article-body h2 {
+      font-family: 'Big Shoulders Display', sans-serif; font-weight: 900;
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem); text-transform: uppercase;
+      line-height: 1; letter-spacing: -0.01em; color: var(--dark);
+      margin: 64px 0 24px;
+    }
+    .article-body h2:first-of-type { margin-top: 0; }
+    .article-body p { font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 22px; }
+    .article-body strong { color: var(--dark); }
+    .article-body a { color: var(--red); text-decoration: underline; text-decoration-color: rgba(200,53,26,0.35); }
+    .article-body a:hover { text-decoration-color: var(--red); }
+
+    .criteria-list { list-style: none; margin: 8px 0 40px; padding: 0; counter-reset: crit; }
+    .criteria-list li {
+      counter-increment: crit; position: relative; padding: 20px 0 20px 56px;
+      border-bottom: 1px solid var(--border);
+    }
+    .criteria-list li:first-child { border-top: 1px solid var(--border); }
+    .criteria-list li::before {
+      content: counter(crit); position: absolute; left: 0; top: 18px;
+      font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 1.6rem;
+      color: var(--red); width: 40px; text-align: center;
+    }
+    .criteria-list strong { display: block; color: var(--dark); font-size: 1.02rem; margin-bottom: 4px; }
+    .criteria-list span { color: var(--muted); font-size: 0.94rem; line-height: 1.6; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
+    .faq-item { background: var(--card); border-left: 3px solid transparent; transition: border-color 0.2s, background 0.2s; }
+    .faq-item:hover { border-left-color: var(--red); background: var(--paper); }
+    .faq-q {
+      font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 1.05rem;
+      text-transform: uppercase; color: var(--dark); padding: 24px 30px; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    }
+    .faq-q::after { content: '+'; color: var(--red); font-size: 1.3rem; flex-shrink: 0; }
+    .faq-a { font-size: 1rem; color: var(--muted); line-height: 1.8; padding: 0 30px 24px; display: none; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-item.open .faq-a { display: block; }
+
+    .related-box {
+      background: var(--surface); border-left: 4px solid var(--red);
+      padding: 28px 32px; margin: 48px 0;
+    }
+    .related-box .label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .related-box a { font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--dark); text-decoration: none; }
+    .related-box a:hover { color: var(--red); }
+
+    .cta-section { background: var(--red); padding: 110px 64px; text-align: center; position: relative; overflow: hidden; }
+    .cta-section::before {
+      content: 'GO'; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 40vw;
+      color: rgba(0,0,0,0.07); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      pointer-events: none; white-space: nowrap; line-height: 1;
+    }
+    .cta-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 20px; position: relative; }
+    .cta-title {
+      font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(3rem, 8vw, 7rem);
+      color: white; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em;
+      margin-bottom: 44px; position: relative;
+    }
+    .cta-sub { margin-top: 24px; font-size: 0.72rem; color: rgba(255,255,255,0.4); position: relative; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 120px 24px 56px; }
+      .article-body { padding: 64px 20px 24px; }
+      .cta-section { padding: 72px 24px; }
+      .faq-q { padding: 18px 20px; font-size: 0.95rem; }
+      .faq-a { padding: 0 20px 18px; }
+      .criteria-list li { padding-left: 48px; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 80px 20px 44px; }
+    }
