@@ -61,19 +61,24 @@
     }
     .faq-nav {
       position: sticky; top: 100px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--red);
+      padding: 24px 0 16px;
     }
     .faq-nav-title {
       font-size: 0.6rem; font-weight: 600;
       letter-spacing: 0.25em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 16px;
+      color: var(--muted); margin-bottom: 12px;
+      padding: 0 20px;
     }
-    .faq-nav-links { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .faq-nav-links { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .faq-nav-links a {
       display: block;
       font-family: 'Big Shoulders Display', sans-serif;
-      font-weight: 700; font-size: 0.95rem;
+      font-weight: 700; font-size: 0.9rem;
       text-transform: uppercase; color: var(--muted);
-      text-decoration: none; padding: 12px 16px;
+      text-decoration: none; padding: 11px 20px;
       border-left: 3px solid transparent;
       transition: color 0.2s, border-color 0.2s, background 0.2s;
       line-height: 1.2;
@@ -81,7 +86,7 @@
     .faq-nav-links a:hover,
     .faq-nav-links a.active {
       color: var(--dark); border-left-color: var(--red);
-      background: var(--card);
+      background: var(--paper);
     }
 
     /* FAQ categories */

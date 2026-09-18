@@ -161,11 +161,16 @@
     .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     .sidebar-links a {
       font-size: 0.82rem; color: var(--muted);
-      text-decoration: none; padding-left: 14px;
+      text-decoration: none; padding-left: 18px;
       position: relative; line-height: 1.5;
+      display: block;
       transition: color 0.2s;
     }
-    .sidebar-links a::before { content: '→'; position: absolute; left: 0; color: var(--red); }
+    .sidebar-links a::before {
+      content: '→'; position: absolute; left: 0;
+      top: 0.15em;
+      color: var(--red); font-size: 0.78rem;
+    }
     .sidebar-links a:hover { color: var(--dark); }
 
     @media (max-width: 900px) {
