@@ -71,6 +71,7 @@
       letter-spacing: 0.25em; text-transform: uppercase;
       color: var(--muted); margin-bottom: 12px;
       padding: 0 20px;
+      text-align: center;
     }
     .faq-nav-links { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .faq-nav-links a {
@@ -124,6 +125,15 @@
     }
     .faq-a a { color: var(--red); text-decoration: none; }
     .faq-a a:hover { text-decoration: underline; }
+    .faq-a-link {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--red); text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(200,53,26,0.3);
+      transition: border-color 0.2s;
+    }
+    .faq-a-link:hover { border-bottom-color: var(--red); }
     .faq-item.open .faq-a { display: block; }
 
     /* CTA */
