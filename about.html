@@ -233,11 +233,21 @@
     @media (max-width: 768px) {
       .hero { padding: 96px 24px 52px; }
       .mission-body { grid-template-columns: 1fr; gap: 40px; }
+      .mission-quote { padding: 20px 24px; }
       .chiffres-grid { grid-template-columns: repeat(2, 1fr); }
+      .chiffre-card  { padding: 32px 24px; }
       .approche-grid { grid-template-columns: 1fr; }
+      .approche-card { padding: 36px 24px; }
       .niche-content { grid-template-columns: 1fr; gap: 40px; }
+      .niche-stat    { padding: 16px 20px; }
       .cta-section { padding: 72px 24px; }
       .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 80px 20px 44px; }
+      .chiffres-grid { grid-template-columns: 1fr; }
+      .chiffre-num { font-size: clamp(2.5rem, 12vw, 3.5rem); }
+      .niche-stat-num { font-size: 1.8rem; }
     }
   </style>
 </head>

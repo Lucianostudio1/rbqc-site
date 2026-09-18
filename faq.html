@@ -169,8 +169,18 @@
     }
     @media (max-width: 768px) {
       .hero { padding: 96px 24px 52px; }
+      .faq-q { padding: 18px 20px; font-size: 0.95rem; }
+      .faq-q::after { font-size: 1.2rem; }
+      .faq-a { padding: 0 20px 18px; font-size: 0.88rem; }
+      .faq-category-title { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 16px; padding-bottom: 12px; }
       .cta-section { padding: 72px 24px; }
       .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 80px 20px 44px; }
+      .faq-section > div { padding: 48px 20px; }
+      .faq-q { padding: 16px 16px; }
+      .faq-a { padding: 0 16px 16px; }
     }
   </style>
 </head>

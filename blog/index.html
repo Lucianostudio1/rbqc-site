@@ -174,8 +174,13 @@
     @media (max-width: 768px) {
       .hero { padding: 96px 24px 52px; }
       .articles-grid { grid-template-columns: 1fr; }
-      .article-card.featured { grid-column: span 1; flex-direction: column; }
+      .article-card { padding: 36px 24px; }
+      .article-card.featured { grid-column: span 1; flex-direction: column; gap: 32px; }
       .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 80px 20px 44px; }
+      .article-card { padding: 28px 20px; }
     }
   </style>
 </head>
