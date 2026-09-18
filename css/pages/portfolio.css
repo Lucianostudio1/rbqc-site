@@ -152,25 +152,59 @@
       text-transform: uppercase; line-height: 0.9;
       letter-spacing: -0.02em; margin-bottom: 64px; color: white;
     }
-    .bar-list { display: flex; flex-direction: column; gap: 20px; max-width: 760px; }
-    .bar-item {
-      display: grid;
-      grid-template-columns: 180px 1fr 90px;
-      align-items: center; gap: 16px;
+    .market-cols {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
     }
-    .bar-name { font-size: 0.82rem; color: rgba(255,255,255,0.45); text-align: right; }
-    .bar-name.rbqc { color: var(--amber); }
-    .bar-track { background: rgba(255,255,255,0.07); border-radius: 2px; height: 10px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 2px; background: rgba(255,255,255,0.2); width: 0; transition: width 1.4s cubic-bezier(.22,1,.36,1); }
-    .bar-fill.gold { background: var(--amber); }
-    .bar-fill.gold-dim { background: rgba(245,196,0,0.35); }
-    .bar-val {
+    .market-col {
+      padding: 48px 44px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .market-col.usa { background: rgba(255,255,255,0.03); }
+    .market-col.qc  { background: rgba(245,196,0,0.06); border-left: 3px solid var(--amber); }
+    .market-col-badge {
+      font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+    .market-col.qc .market-col-badge { color: var(--amber); }
+    .market-col-title {
       font-family: 'Big Shoulders Display', sans-serif;
-      font-weight: 700; font-size: 1rem;
-      color: rgba(255,255,255,0.4); letter-spacing: 0.05em;
+      font-weight: 900; font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+      text-transform: uppercase; line-height: 0.95;
+      letter-spacing: -0.01em; color: rgba(255,255,255,0.5);
     }
-    .bar-val.gold { color: var(--amber); }
-    .market-note { font-size: 0.7rem; color: rgba(255,255,255,0.2); margin-top: 32px; font-style: italic; max-width: 600px; }
+    .market-col.qc .market-col-title { color: white; }
+    .market-points {
+      list-style: none; display: flex; flex-direction: column; gap: 12px;
+    }
+    .market-points li {
+      font-size: 0.88rem; color: rgba(255,255,255,0.35);
+      line-height: 1.6; padding-left: 16px; position: relative;
+    }
+    .market-points li::before {
+      content: '—'; position: absolute; left: 0;
+      color: rgba(255,255,255,0.15);
+    }
+    .market-col.qc .market-points li { color: rgba(255,255,255,0.65); }
+    .market-col.qc .market-points li::before { color: var(--amber); }
+    .market-stat-row {
+      display: flex; align-items: baseline; gap: 12px;
+      margin-top: auto; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .market-stat-num {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: 3rem;
+      color: rgba(255,255,255,0.2); line-height: 1;
+    }
+    .market-col.qc .market-stat-num { color: var(--amber); }
+    .market-stat-lbl {
+      font-size: 0.7rem; color: rgba(255,255,255,0.25);
+      line-height: 1.4; max-width: 160px;
+    }
+    .market-col.qc .market-stat-lbl { color: rgba(255,255,255,0.5); }
 
     /* ── Preuve sociale ── */
     .proof { background: var(--surface); }
@@ -229,10 +263,9 @@
       .platforms-grid { grid-template-columns: repeat(2, 1fr); }
       .platform-card  { padding: 32px 20px; }
       .proof-layout   { grid-template-columns: 1fr; gap: 40px; }
-      .bar-list       { max-width: 100%; }
-      .bar-item       { grid-template-columns: 90px 1fr 56px; gap: 8px; }
-      .bar-name       { font-size: 0.72rem; }
-      .bar-val        { font-size: 0.82rem; }
+      .market-cols    { grid-template-columns: 1fr; }
+      .market-col     { padding: 36px 24px; }
+      .market-col.qc  { border-left: none; border-top: 3px solid var(--amber); }
       .cta-section    { padding: 72px 24px; }
     }
     @media (max-width: 480px) {
