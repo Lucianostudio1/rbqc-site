@@ -60,7 +60,18 @@
       gap: 64px; align-items: start;
     }
     .faq-nav {
+      /* Reset du CSS global nav { display:flex; position:fixed; ... } */
+      display: block;
       position: sticky; top: 100px;
+      left: auto; right: auto;
+      z-index: auto;
+      justify-content: initial;
+      align-items: initial;
+      padding: 0;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      transition: none;
+      /* Styles propres */
       background: var(--card);
       border: 1px solid var(--border);
       overflow: hidden;
