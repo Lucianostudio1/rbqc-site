@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Toutes vos Questions sur le Clipping Vidéo | RBQC</title>
+  <meta name="description" content="Toutes vos questions sur le clipping vidéo pour humoristes et podcasteurs québécois. Formules, prix, droits, distribution, délais — réponses complètes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="FAQ — Toutes vos Questions sur le Clipping | RBQC">
+  <meta property="og:description" content="Formules, prix, droits, distribution, délais — toutes vos questions sur le clipping vidéo RBQC, répondues.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rbqc.ca/faq.html">
+  <meta property="og:site_name" content="RBQC">
+  <meta property="og:image" content="https://rbqc.ca/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ Clipping Vidéo — RBQC">
+  <meta name="twitter:description" content="Formules, prix, droits, distribution, délais — toutes vos questions sur le clipping vidéo RBQC.">
+  <link rel="canonical" href="https://rbqc.ca/faq.html">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"C'est quoi le clipping vidéo ?","acceptedAnswer":{"@type":"Answer","text":"Le clipping consiste à extraire les meilleurs moments d'un long contenu (show, podcast, live) et à les transformer en clips courts optimisés pour TikTok, Reels, Facebook et YouTube Shorts."}},
+      {"@type":"Question","name":"Combien de clips peut-on produire par épisode ?","acceptedAnswer":{"@type":"Answer","text":"Un spectacle de 60-90 minutes génère généralement entre 15 et 30 clips. Un épisode de podcast de 45 minutes produit typiquement 8-15 clips."}},
+      {"@type":"Question","name":"Est-ce que je garde mes droits sur mon contenu ?","acceptedAnswer":{"@type":"Answer","text":"Absolument. Tu restes propriétaire à 100% de ton contenu. RBQC agit uniquement comme partenaire de distribution."}},
+      {"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"RBQC propose trois formules : clipping à 2$/clip, pay-for-performance à 0,50$/1 000 vues, ou commission de 10% sur les billets vendus via nos clips."}},
+      {"@type":"Question","name":"Quel est le délai de livraison ?","acceptedAnswer":{"@type":"Answer","text":"Pour le clipping à la pièce : 48-72h par lot. Pour les formules distribution et commission : les clips sont prêts dans les 5 jours suivant la réception du fichier."}}
+    ]
+  }
+  </script>
+  <style>
+    .hero {
+      min-height: 45dvh;
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 140px 64px 72px;
+      position: relative; overflow: hidden;
+      background: var(--paper);
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 55%; height: 100%;
+      background: radial-gradient(ellipse 50% 60% at 80% -5%, rgba(200,53,26,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 24px;
+      display: flex; align-items: center; gap: 14px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.2s forwards;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 22px; height: 2px;
+      background: var(--red); display: block; flex-shrink: 0;
+    }
+    .hero-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(3.5rem, 9vw, 9rem);
+      text-transform: uppercase; line-height: 0.88;
+      letter-spacing: -0.02em; color: var(--dark);
+      opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards;
+      margin-bottom: 24px; position: relative; z-index: 1;
+    }
+    .hero-title .accent { color: var(--red); }
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--muted); line-height: 1.7; max-width: 520px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.5s forwards;
+    }
+
+    /* FAQ layout */
+    .faq-section { background: var(--surface); }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 64px; align-items: start;
+    }
+    .faq-nav {
+      position: sticky; top: 100px;
+    }
+    .faq-nav-title {
+      font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 16px;
+    }
+    .faq-nav-links { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .faq-nav-links a {
+      display: block;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 0.95rem;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; padding: 12px 16px;
+      border-left: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      line-height: 1.2;
+    }
+    .faq-nav-links a:hover,
+    .faq-nav-links a.active {
+      color: var(--dark); border-left-color: var(--red);
+      background: var(--card);
+    }
+
+    /* FAQ categories */
+    .faq-category { margin-bottom: 48px; }
+    .faq-category-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(1.8rem, 3vw, 2.8rem);
+      text-transform: uppercase; color: var(--dark);
+      line-height: 0.95; letter-spacing: -0.01em;
+      margin-bottom: 24px; padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item {
+      background: var(--card);
+      border-left: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .faq-item:hover { border-left-color: var(--red); background: var(--paper); }
+    .faq-item.open { border-left-color: var(--red); background: var(--paper); }
+    .faq-q {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 700; font-size: 1.05rem;
+      text-transform: uppercase; color: var(--dark);
+      padding: 22px 28px; cursor: pointer;
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; line-height: 1.2;
+    }
+    .faq-q::after { content: '+'; color: var(--red); font-size: 1.4rem; flex-shrink: 0; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a {
+      font-size: 0.92rem; color: var(--muted);
+      line-height: 1.8; padding: 0 28px 22px;
+      display: none;
+    }
+    .faq-a a { color: var(--red); text-decoration: none; }
+    .faq-a a:hover { text-decoration: underline; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* CTA */
+    .cta-section {
+      background: var(--dark); padding: 100px 64px;
+      text-align: center;
+    }
+    .cta-label {
+      font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35); margin-bottom: 20px;
+    }
+    .cta-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem, 6vw, 6rem);
+      color: white; text-transform: uppercase;
+      line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 40px;
+    }
+    .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-sub { margin-top: 20px; font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 900px) {
+      .faq-layout { grid-template-columns: 1fr; }
+      .faq-nav { position: static; display: none; }
+    }
+    @media (max-width: 768px) {
+      .hero { padding: 96px 24px 52px; }
+      .cta-section { padding: 72px 24px; }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="index.html">RB<span class="accent">QC</span></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="blog/index.html">Blogue</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="nav-cta" href="contact.html">Travailler avec nous</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <ul>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="blog/index.html">Blogue</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Travailler avec nous</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">RBQC · Questions fréquentes</div>
+  <h1 class="hero-title">Tes questions sur<br>le <span class="accent">clipping</span>,<br>répondues.</h1>
+  <p class="hero-sub">Tout ce que tu veux savoir avant de démarrer — formules, prix, droits, distribution et délais.</p>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-label reveal">FAQ complète</div>
+  <div class="faq-layout">
+
+    <!-- Nav catégories -->
+    <nav class="faq-nav" aria-label="Catégories FAQ">
+      <div class="faq-nav-title">Catégories</div>
+      <ul class="faq-nav-links">
+        <li><a href="#comprendre" class="active">Le clipping</a></li>
+        <li><a href="#formules">Les formules</a></li>
+        <li><a href="#distribution">La distribution</a></li>
+        <li><a href="#droits">Droits & propriété</a></li>
+        <li><a href="#demarrer">Démarrer</a></li>
+      </ul>
+    </nav>
+
+    <!-- Questions -->
+    <div>
+
+      <div class="faq-category" id="comprendre">
+        <h2 class="faq-category-title">Comprendre le clipping</h2>
+        <div class="faq-list">
+          <div class="faq-item open">
+            <div class="faq-q" role="button" aria-expanded="true" tabindex="0">C'est quoi le clipping vidéo, concrètement ?</div>
+            <div class="faq-a">Le clipping consiste à prendre un long contenu — un spectacle, un épisode de podcast, un live ou une capsule — et à en extraire les meilleurs moments pour les transformer en clips courts (15-90 secondes), optimisés pour TikTok, Reels, Facebook et YouTube Shorts. On s'occupe du découpage, du formatage vertical, des sous-titres animés et de la distribution.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Combien de clips peut-on tirer d'un seul contenu ?</div>
+            <div class="faq-a">Un spectacle de 60-90 minutes génère généralement entre 15 et 30 clips de qualité. Un épisode de podcast de 45 minutes produit typiquement 8-15 clips. On sélectionne toujours les moments les plus forts — le but c'est la qualité et l'impact, pas le volume.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Pourquoi le clipping fonctionne pour l'humour québécois ?</div>
+            <div class="faq-a">L'humour québécois a des codes culturels spécifiques qui créent une forte identification chez l'audience francophone. Nos clips atteignent un taux de rétention moyen de 72% — les gens regardent jusqu'à la fin. C'est le signal le plus fort qu'un algorithme peut recevoir, et ça se traduit directement en portée organique. Le marché est aussi presque vierge : il y a très peu de compétition en clipping professionnel pour le contenu francophone.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Quel type de contenu peut être clippé ?</div>
+            <div class="faq-a">On clippe : les spectacles d'humour et de stand-up, les podcasts, les émissions et talk-shows, les lives et événements filmés, les capsules et entrevues. Le contenu doit être en français québécois et avoir une durée minimale de 20-30 minutes pour générer un lot de clips intéressant.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category" id="formules">
+        <h2 class="faq-category-title">Les formules et les prix</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Quelles sont les trois formules disponibles ?</div>
+            <div class="faq-a"><strong>Clipping à la pièce (2$/clip)</strong> — Tu commandes un nombre défini de clips. Simple et prévisible, idéal pour tester. <br><br><strong>Pay-for-performance (0,50$/1 000 vues)</strong> — Tu paies uniquement sur les vues réelles générées. Clipping et distribution inclus. Si ça ne performe pas, ça ne te coûte rien. <br><br><strong>Commission sur billets (10%)</strong> — Zéro déboursé. On travaille avec un lien tracké et on touche uniquement sur les billets qu'on génère directement. Voir les <a href="services.html">détails complets des formules →</a></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Y a-t-il un engagement minimum ou un contrat à long terme ?</div>
+            <div class="faq-a">Non. La formule clipping à la pièce est sans engagement — tu commandes quand tu veux. Les formules pay-for-performance et commission ont une période minimale de 30 jours pour permettre à la distribution de prendre de la vitesse, mais tu peux résilier en donnant un préavis de 15 jours.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Peut-on combiner les formules ?</div>
+            <div class="faq-a">Oui. Par exemple, utiliser la formule à la pièce pour un premier test, puis passer à la pay-for-performance une fois que tu as vu les résultats. On peut aussi adapter la formule selon le type de contenu — une série de podcasts vs un one-man-show n'ont pas les mêmes besoins.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Comment fonctionne le tracking des billets vendus ?</div>
+            <div class="faq-a">On crée un lien de tracking unique ou un code promo exclusif RBQC pour chaque artiste. Chaque vente passant par ce lien nous est attribuée. Tu reçois un rapport mensuel avec le nombre de clics, les conversions et le montant généré.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category" id="distribution">
+        <h2 class="faq-category-title">La distribution</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Sur quelles plateformes distribuez-vous les clips ?</div>
+            <div class="faq-a">On distribue sur quatre plateformes : TikTok, Instagram Reels, Facebook et YouTube Shorts. Chaque plateforme reçoit une version native optimisée — format, ratio, hashtags et heure de publication sont adaptés à chaque réseau pour maximiser la portée algorithmique.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Est-ce que mes clips sont publiés sur mes propres pages ou sur les vôtres ?</div>
+            <div class="faq-a">Sur nos 12 pages RBQC (3 marques × 4 plateformes), sauf entente différente. Si tu veux qu'on publie directement sur tes propres pages, c'est possible — on discutera de l'accès et de la stratégie selon ton cas spécifique.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Quel est le délai entre la réception du fichier et la publication ?</div>
+            <div class="faq-a">Pour la formule à la pièce : les clips sont livrés en 48-72h par lot. Pour les formules distribution et commission : les clips sont produits et programmés dans les 5 jours suivant la réception du fichier. La publication est ensuite étalée selon un calendrier optimisé.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Est-ce que je reçois des rapports de performance ?</div>
+            <div class="faq-a">Oui. Toutes les formules incluent un rapport mensuel avec les impressions, les interactions, les plateformes les plus actives et les clips les plus performants. La formule commission inclut aussi le nombre de clics sur le lien tracké et les billets générés.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category" id="droits">
+        <h2 class="faq-category-title">Droits et propriété</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Est-ce que je garde mes droits sur mon contenu ?</div>
+            <div class="faq-a">Absolument. Tu es et restes propriétaire de ton contenu à 100%. RBQC agit uniquement comme partenaire de production et de distribution. On n'utilise jamais ton contenu pour d'autres fins sans ton accord explicite et par écrit.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Est-ce que RBQC peut utiliser mes clips à des fins promotionnelles ?</div>
+            <div class="faq-a">Uniquement avec ton accord préalable. Si tu nous autorises à présenter tes clips comme exemples de notre travail (sur notre site ou dans nos présentations clients), on te demandera une autorisation explicite. C'est optionnel et ne change rien à la qualité du service.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Que se passe-t-il si je décide de mettre fin à la collaboration ?</div>
+            <div class="faq-a">Les clips déjà produits et publiés restent en ligne sur nos pages, sauf si tu demandes leur retrait — dans ce cas on les retire dans les 48h. Tous les fichiers originaux que tu nous as fournis sont supprimés de nos systèmes. Aucune pénalité de résiliation.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category" id="demarrer">
+        <h2 class="faq-category-title">Démarrer avec RBQC</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Comment se passe le premier contact ?</div>
+            <div class="faq-a">Tu nous écris via le <a href="contact.html">formulaire de contact</a> ou directement à <a href="mailto:contact@rbqc.ca">contact@rbqc.ca</a>. On te répond dans les 24h pour comprendre ton projet, te recommander la formule adaptée et répondre à tes questions. Aucun engagement à cette étape.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Peut-on tester avec un seul épisode avant de s'engager ?</div>
+            <div class="faq-a">Oui, c'est même ce qu'on recommande. La formule clipping à la pièce est parfaite pour ça — tu commandes un batch sur un seul épisode, tu vois les résultats en vrai, et tu décides de la suite. Pas de surprise, pas de pression.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" aria-expanded="false" tabindex="0">Comment envoyer mes fichiers vidéo ?</div>
+            <div class="faq-a">On établit un dossier partagé (Dropbox ou Google Drive) lors du démarrage. Tu déposes ton fichier dans ce dossier, et on prend le relais. N'importe quel format est accepté (MP4, MOV, MKV). Pour les très gros fichiers, on peut aussi utiliser WeTransfer ou un lien de téléchargement direct.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="cta-label">Tu as encore des questions ?</p>
+  <h2 class="cta-title">Écris-nous<br>directement.</h2>
+  <div class="cta-row">
+    <a class="btn-primary" href="contact.html">Nous contacter →</a>
+    <a class="btn-ghost" href="services.html" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.6);">Voir les formules →</a>
+  </div>
+  <p class="cta-sub">contact@rbqc.ca · Réponse en moins de 24 h</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="index.html">RBQC</a>
+  <ul class="footer-nav">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Résultats</a></li>
+    <li><a href="blog/index.html">Blogue</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 RBQC — Tous droits réservés</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(q => {
+  const toggle = () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+    });
+    if (!wasOpen) { item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); }
+  };
+  q.addEventListener('click', toggle);
+  q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
+
+// Sidebar nav highlight
+const cats = document.querySelectorAll('.faq-category');
+const navLinks = document.querySelectorAll('.faq-nav-links a');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const link = document.querySelector(`.faq-nav-links a[href="#${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+cats.forEach(c => io.observe(c));
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+const hamburger = document.querySelector('.nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile');
+hamburger?.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && hamburger?.classList.contains('open')) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>
