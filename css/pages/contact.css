@@ -220,7 +220,7 @@
       .contact-aside { order: -1; }
     }
     @media (max-width: 768px) {
-      .hero { padding: 96px 24px 52px; }
+      .hero { padding: 72px 24px 40px; min-height: 0; }
       .hero-title { font-size: clamp(3rem, 10vw, 6rem); }
       .form-row { grid-template-columns: 1fr; gap: 0; }
       .expect-box { padding: 24px 20px; }

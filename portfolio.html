@@ -1,36 +1,59 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Résultats — Clips Humour Québécois qui Performent Vraiment</title>
-  <meta name="description" content="29M impressions, 398K interactions, 72% de rétention. Résultats réels du clipping pour humoristes et podcasteurs québécois sur 12 mois.">
+  <title>Résultats : 3 audiences humour bâties de zéro | RBQC</title>
+  <meta name="description" content="Avant de clipper pour toi, on a bâti nos propres pages d'humour québécois : 29M+ impressions sans pub. Chiffres, clips phares et courbe de croissance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta property="og:title" content="29M Impressions, 72% Rétention — Résultats RBQC">
-  <meta property="og:description" content="Les vrais chiffres du clipping pour humoristes et podcasteurs québécois. Découvre les clips qui ont explosé et comment ils ont vendu des billets.">
+  <meta property="og:title" content="Résultats : 3 audiences humour bâties de zéro | RBQC">
+  <meta property="og:description" content="Avant de clipper pour toi, on a bâti nos propres pages d'humour québécois : 29M+ impressions sans pub. Chiffres, clips phares et courbe de croissance.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rbqc.ca/portfolio.html">
   <meta property="og:site_name" content="RBQC">
   <meta property="og:image" content="https://rbqc.ca/og-image.png">
+  <meta property="og:locale" content="fr_CA">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="29M Impressions, 72% Rétention — Résultats RBQC">
-  <meta name="twitter:description" content="Les vrais chiffres du clipping pour humoristes et podcasteurs québécois. Découvre les clips qui ont explosé et comment ils ont vendu des billets.">
+  <meta name="twitter:title" content="Résultats : 3 audiences humour bâties de zéro | RBQC">
+  <meta name="twitter:description" content="Avant de clipper pour toi, on a bâti nos propres pages d'humour québécois : 29M+ impressions sans pub. Chiffres, clips phares et courbe de croissance.">
   <link rel="canonical" href="https://rbqc.ca/portfolio.html">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages/portfolio.css">
+  <style>
+    /* ── Responsive overrides pour les grilles inline du portfolio ── */
+    @media (max-width: 768px) {
+      /* Sections brand : passe en colonne unique */
+      .brand-card-header   { grid-template-columns: 1fr !important; }
+      .brand-stats-row     { grid-template-columns: repeat(2, 1fr) !important; }
+      .brand-clips-row     { grid-template-columns: 1fr !important; }
+      /* Timeline : 2 colonnes */
+      .timeline-grid       { grid-template-columns: repeat(2, 1fr) !important; }
+      /* Padding réduit */
+      .stats-full          { padding: 56px 24px !important; }
+    }
+    @media (max-width: 480px) {
+      .brand-stats-row     { grid-template-columns: 1fr !important; }
+      .timeline-grid       { grid-template-columns: 1fr !important; }
+    }
+  </style>
 
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Résultats — Clips Humour Québécois qui Performent Vraiment",
-  "description": "29M impressions, 398K interactions, 72% de rétention. Résultats réels du clipping vidéo pour humoristes et podcasteurs québécois sur 12 mois.",
-  "url": "https://rbqc.ca/portfolio.html",
-  "about": {"@type": "Organization", "name": "RBQC", "url": "https://rbqc.ca"}
-}
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Résultats — RBQC",
+    "description": "3 pages d'humour québécois bâties et opérées par RBQC depuis le départ. 29M+ impressions, 398K interactions, 72% de rétention moyenne sur 12 mois.",
+    "url": "https://rbqc.ca/portfolio.html",
+    "about": {
+      "@type": "Organization",
+      "name": "Rires Bruts Québec",
+      "alternateName": "RBQC",
+      "url": "https://rbqc.ca"
+    }
+  }
   </script>
 </head>
 <body>
@@ -50,7 +73,7 @@
   </button>
 </nav>
 <nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
-    <ul>
+  <ul>
     <li><a href="services.html">Services</a></li>
     <li><a href="portfolio.html">Résultats</a></li>
     <li><a href="blog/index.html">Blogue</a></li>
@@ -63,300 +86,243 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">RBQC · Résultats &amp; Preuves</div>
-  <div class="hero-number">72%</div>
-  <h1 class="hero-label">Nos clips d'humour vendent des billets. La preuve en chiffres.</h1>
-  <p class="hero-sub">Les chiffres ne mentent pas. Voici ce que RBQC a accompli — et ce que ça veut dire pour toi.</p>
+  <div class="hero-eyebrow">Notre terrain de jeu</div>
+  <h1 class="hero-label" style="font-size:clamp(1.5rem,3vw,2.2rem);font-family:'Big Shoulders Display',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;color:white;line-height:1.05;max-width:680px;margin-bottom:20px;">
+    Avant de clipper pour toi,<br>on a bâti nos propres audiences.
+  </h1>
+  <p class="hero-sub">3 pages d'humour québécois opérées par RBQC. 29M+ impressions, zéro dollar en pub.</p>
 </section>
 
-<!-- CHIFFRES COMPLETS -->
-<section class="stats-full">
-  <div class="section-label reveal">Performance globale</div>
-  <h2 class="reveal">29M impressions, 12 mois,<br>3 marques · 4 plateformes · 12 chaînes.</h2>
-  <div class="stats-grid">
-    <div class="stat-item reveal">
-      <span class="stat-num" data-target="28982839">0</span>
-      <span class="stat-lbl">Impressions totales</span>
-      <span class="stat-sub">3 marques · 12 mois</span>
+<!-- 3 ÉTUDES DE CAS -->
+<section class="stats-full" style="padding:80px 64px">
+  <div class="section-label reveal">3 pages, 3 preuves</div>
+  <h2 class="reveal" style="margin-bottom:56px;">Trois brands.<br>Trois audiences bâties de zéro.</h2>
+
+  <!-- Rires Bruts Québec -->
+  <div class="reveal" style="border:1px solid var(--border);border-left:3px solid var(--amber);background:var(--card);margin-bottom:2px;">
+    <div class="brand-card-header" style="display:grid;grid-template-columns:1fr 2fr;gap:0;border-bottom:1px solid var(--border);">
+      <div style="padding:40px 44px;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;">Brand principale</div>
+          <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(1.6rem,2.5vw,2.2rem);text-transform:uppercase;line-height:0.95;color:var(--dark);margin-bottom:16px;">Rires Bruts Québec</h3>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;">Clips de stand-up, spectacles et shows variés. La brand généraliste humour québécois — là où tout a commencé.</p>
+        </div>
+        <div style="margin-top:24px;">
+          <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Contenu</div>
+          <div style="font-size:0.82rem;color:var(--dark);">Stand-up · Spectacles · Shows scène</div>
+        </div>
+      </div>
+      <div class="brand-stats-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);">
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--dark);line-height:1;display:block;letter-spacing:-0.02em;">20,9M</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Impressions · 4 plateformes</span>
+        </div>
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--amber);line-height:1;display:block;letter-spacing:-0.02em;">558K</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Vues · clip le plus performant</span>
+        </div>
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--dark);line-height:1;display:block;letter-spacing:-0.02em;">294K</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Interactions · 846 posts</span>
+        </div>
+      </div>
     </div>
-    <div class="stat-item reveal" style="transition-delay:.1s">
-      <span class="stat-num" data-target="398739">0</span>
-      <span class="stat-lbl">Interactions</span>
-      <span class="stat-sub">likes, partages, commentaires</span>
+    <!-- Clips phares RBQC -->
+    <div class="brand-clips-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);">
+      <div class="clip-card" style="background:var(--paper);">
+        <div class="clip-thumb" style="background-image:url('img-clip-papa-tenculer.png');aspect-ratio:16/7;">
+          <div class="clip-thumb-overlay"></div>
+          <div class="clip-thumb-title">Papa va t'encu***, un fou rire mémorable</div>
+        </div>
+        <div class="clip-meta">
+          <div class="clip-platform" style="color:var(--muted);">TikTok · Rires Bruts Québec</div>
+        </div>
+        <div class="clip-stats">
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>6,8K</div>
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>130 partages</div>
+        </div>
+      </div>
+      <div class="clip-card" style="background:var(--paper);">
+        <div class="clip-thumb" style="background-image:url('img-clip-fou-villeray.png');aspect-ratio:16/7;">
+          <div class="clip-thumb-overlay"></div>
+          <div class="clip-thumb-title">Le Fou de Villeray, aux rires de mes voisins</div>
+        </div>
+        <div class="clip-meta">
+          <div class="clip-platform" style="color:var(--muted);">TikTok · Rires Bruts Québec</div>
+        </div>
+        <div class="clip-stats">
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>7,3K</div>
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>143 partages</div>
+        </div>
+      </div>
     </div>
-    <div class="stat-item highlight reveal" style="transition-delay:.2s">
-      <span class="stat-num">72%</span>
-      <span class="stat-lbl">Taux de rétention moyen</span>
-      <span class="stat-sub">les gens regardent jusqu'à la fin</span>
+  </div>
+
+  <!-- Québec LOL -->
+  <div class="reveal" style="border:1px solid var(--border);border-left:3px solid var(--mustard);background:var(--card);margin-bottom:2px;">
+    <div class="brand-card-header" style="display:grid;grid-template-columns:1fr 2fr;gap:0;border-bottom:1px solid var(--border);">
+      <div style="padding:40px 44px;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--mustard);margin-bottom:12px;">Brand secondaire</div>
+          <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(1.6rem,2.5vw,2.2rem);text-transform:uppercase;line-height:0.95;color:var(--dark);margin-bottom:16px;">Québec LOL</h3>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;">Humour plus large, podcasts et capsules. La brand qui prouve que le modèle fonctionne sur différents formats de contenu.</p>
+        </div>
+        <div style="margin-top:24px;">
+          <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Contenu</div>
+          <div style="font-size:0.82rem;color:var(--dark);">Podcasts · Capsules · Humour varié</div>
+        </div>
+      </div>
+      <div class="brand-stats-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);">
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--dark);line-height:1;display:block;letter-spacing:-0.02em;">5,75M</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Impressions · 4 plateformes</span>
+        </div>
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--amber);line-height:1;display:block;letter-spacing:-0.02em;">188K</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Vues · clip le plus performant</span>
+        </div>
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--dark);line-height:1;display:block;letter-spacing:-0.02em;">65K</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Interactions · 589 posts</span>
+        </div>
+      </div>
     </div>
-    <div class="stat-item reveal" style="transition-delay:.3s">
-      <span class="stat-num" data-target="558154">0</span>
-      <span class="stat-lbl">Vues · Clip le plus performant</span>
-      <span class="stat-sub">un seul clip, une seule page</span>
+    <div class="brand-clips-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);">
+      <div class="clip-card" style="background:var(--paper);">
+        <div class="clip-thumb" style="background-image:url('img-clip-soly-podcast.png');aspect-ratio:16/7;">
+          <div class="clip-thumb-overlay"></div>
+          <div class="clip-thumb-title">Soly Podcast #1 — extrait viral</div>
+        </div>
+        <div class="clip-meta">
+          <div class="clip-platform" style="color:var(--muted);">TikTok · Québec LOL</div>
+        </div>
+        <div class="clip-stats">
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>1,4K</div>
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>40 partages</div>
+        </div>
+      </div>
+      <div class="clip-card" style="background:var(--paper);">
+        <div style="padding:32px 28px;display:flex;flex-direction:column;justify-content:center;height:100%;background:var(--surface);">
+          <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Format testé</div>
+          <p style="font-size:0.88rem;color:var(--dark);line-height:1.7;">La brand Québec LOL a validé le modèle sur les podcasts et capsules — un format différent de RBQC, les mêmes résultats de distribution.</p>
+        </div>
+      </div>
     </div>
-    <div class="stat-item reveal" style="transition-delay:.4s">
-      <span class="stat-num" data-target="43792">0</span>
-      <span class="stat-lbl">Abonnés combinés</span>
-      <span class="stat-sub">3 marques · 12 chaînes</span>
+  </div>
+
+  <!-- Punch Line QC -->
+  <div class="reveal" style="border:1px solid var(--border);border-left:3px solid var(--red);background:var(--card);">
+    <div class="brand-card-header" style="display:grid;grid-template-columns:1fr 2fr;gap:0;border-bottom:1px solid var(--border);">
+      <div style="padding:40px 44px;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px;">Lancée en juin 2026 · Zéro abonné</div>
+          <h3 style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(1.6rem,2.5vw,2.2rem);text-transform:uppercase;line-height:0.95;color:var(--dark);margin-bottom:16px;">Punch Line QC</h3>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;">La preuve qu'on peut partir de zéro. Lancée en juin 2026 sans audience, sans pub — exactement comme ton projet partirait aujourd'hui.</p>
+        </div>
+        <div style="margin-top:24px;padding:16px 20px;background:var(--surface);border-left:2px solid var(--red);">
+          <p style="font-size:0.8rem;color:var(--dark);line-height:1.6;margin:0;"><strong>Si on a fait ça pour nous-mêmes en partant de zéro, on peut le faire pour toi.</strong></p>
+        </div>
+      </div>
+      <div class="brand-stats-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);">
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--red);line-height:1;display:block;letter-spacing:-0.02em;">171K</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Vues · clip le plus performant</span>
+        </div>
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--amber);line-height:1;display:block;letter-spacing:-0.02em;">2,3M</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Impressions · 4 plateformes</span>
+        </div>
+        <div style="background:var(--card);padding:32px 28px;">
+          <span style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.8rem;color:var(--dark);line-height:1;display:block;letter-spacing:-0.02em;">39,6K</span>
+          <span style="font-size:0.62rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;">Interactions · 280 posts</span>
+        </div>
+      </div>
     </div>
-    <div class="stat-item reveal" style="transition-delay:.5s">
-      <span class="stat-num" data-target="1715">0</span>
-      <span class="stat-lbl">Publications totales</span>
-      <span class="stat-sub">tous réseaux confondus</span>
+    <div class="brand-clips-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);">
+      <div class="clip-card" style="background:var(--paper);">
+        <div class="clip-thumb" style="background-image:url('img-clip-pa-methot.png');aspect-ratio:16/7;">
+          <div class="clip-thumb-overlay"></div>
+          <div class="clip-thumb-title">Pa Méthot — clip Punch Line QC</div>
+        </div>
+        <div class="clip-meta">
+          <div class="clip-platform" style="color:var(--muted);">TikTok · Punch Line QC</div>
+        </div>
+        <div class="clip-stats">
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>2,7K</div>
+          <div class="clip-stat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>175 partages</div>
+        </div>
+      </div>
+      <div class="clip-card" style="background:var(--paper);">
+        <div style="padding:32px 28px;display:flex;flex-direction:column;justify-content:center;height:100%;background:var(--surface);">
+          <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:8px;">Trajectoire de croissance</div>
+          <p style="font-size:0.88rem;color:var(--dark);line-height:1.7;margin:0;">Juin 2026 : 0 abonné. Juillet 2026 : premières centaines de vues. Août-sept. 2026 : clips à 100K+ vues. <strong>3 mois, zero budget pub.</strong></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PLATEFORMES -->
-<section class="platforms">
-  <div class="section-label reveal">Distribution</div>
-  <h2 class="reveal">Facebook, TikTok, Reels, Shorts :<br>le portrait complet.</h2>
-  <div class="platforms-grid">
-    <div class="platform-card reveal">
-      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
-      <div class="platform-name">Facebook</div>
-      <p class="platform-desc"><strong style="color:var(--dark)">C'est là que ça se vend.</strong> 38K abonnés · 26M d'impressions · 347K interactions — Facebook génère le volume et convertit l'audience québécoise 35+ en acheteurs de billets.</p>
+<!-- TIMELINE -->
+<section style="background:var(--paper);padding:80px 64px;border-top:1px solid var(--border);">
+  <div class="section-label reveal">Résultats dans le temps</div>
+  <h2 class="reveal" style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,4rem);text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:12px;">Combien de temps avant<br>de voir des résultats ?</h2>
+  <p class="reveal" style="font-size:1rem;color:var(--muted);margin-bottom:56px;max-width:560px;line-height:1.7;">Les premières vues arrivent en 48-72 h. Une vraie traction se construit sur 3 à 6 mois — et elle s'accélère.</p>
+
+  <div class="reveal timeline-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);">
+    <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--border);">
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Semaine 1</div>
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Premiers clips en ligne</div>
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">48-72 h après dépôt du fichier. Tes clips sont en ligne et commencent à circuler.</p>
     </div>
-    <div class="platform-card reveal" style="transition-delay:.1s">
-      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-      <div class="platform-name">TikTok</div>
-      <p class="platform-desc"><strong style="color:var(--dark)">C'est là que les leads se génèrent.</strong> 4 400 abonnés · Les 18–30 ans qui achètent des billets ne sont pas sur Facebook. Un clip peut exploser sans prévenir — et une seule vidéo virale change tout.</p>
+    <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--border);">
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Mois 1-2</div>
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Premières vues organiques</div>
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">Premières interactions, premiers abonnés. La traction commence à se former.</p>
     </div>
-    <div class="platform-card reveal" style="transition-delay:.2s">
-      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
-      <div class="platform-name">Reels</div>
-      <p class="platform-desc"><strong style="color:var(--dark)">Double portée, même clip.</strong> 1 100 abonnés · Instagram Reels touche la même cible que TikTok avec l'avantage du réseau existant. Un seul fichier, deux algorithmes activés.</p>
+    <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--amber);">
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--amber);margin-bottom:16px;">Mois 3-6</div>
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Clips à 100K+ vues</div>
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">La masse de clips crée un effet compound. C'est là que les vrais pics de performance apparaissent.</p>
     </div>
-    <div class="platform-card reveal" style="transition-delay:.3s">
-      <span class="platform-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
-      <div class="platform-name">Shorts</div>
-      <p class="platform-desc"><strong style="color:var(--dark)">Le seul qui joue encore dans 6 mois.</strong> 200 abonnés · Facebook et TikTok meurent en 48h. Un Short accumule des vues pendant des mois — du contenu qui travaille pour toi en dormant.</p>
+    <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--red);">
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--red);margin-bottom:16px;">12 mois</div>
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Actifs permanents</div>
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">29M+ impressions, 1 715 clips en ligne. Le contenu continue de générer des vues des mois après publication.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTEXTE MARCHÉ -->
+<!-- MARCHÉ : QC vs USA -->
 <section class="market">
-  <div class="section-label light reveal">Contexte nord-américain</div>
-  <h2 class="reveal">Le clipping a bâti l’humour américain.<br>Au Québec, c’est maintenant.</h2>
+  <div class="section-label reveal" style="color:rgba(255,255,255,0.3);">Contexte de marché</div>
+  <h2 class="reveal">Le clipping a bâti l'humour américain.<br>Au Québec, c'est maintenant.</h2>
   <div class="market-cols">
-
     <div class="market-col usa">
       <div class="market-col-badge">États-Unis</div>
       <div class="market-col-title">Marché mature,<br>compétition féroce.</div>
       <ul class="market-points">
-        <li>Des centaines d’agences de clipping en opération</li>
+        <li>Des centaines d'agences de clipping en opération</li>
         <li>Schulz, Theo Von, Ryan Long — bâtis par le clipping intensif</li>
-        <li>Coûts d’acquisition d’audience élevés</li>
-        <li>Saturation : difficile d’émerger sans budget massif</li>
+        <li>Coûts d'acquisition d'audience élevés</li>
+        <li>Saturation : difficile d'émerger sans budget massif</li>
       </ul>
       <div class="market-stat-row">
         <span class="market-stat-num">5,8M</span>
         <span class="market-stat-lbl">abonnés · Flagrant (A. Schulz)</span>
       </div>
     </div>
-
     <div class="market-col qc">
       <div class="market-col-badge">Québec</div>
       <div class="market-col-title">Marché vierge,<br>RBQC premier.</div>
       <ul class="market-points">
-        <li>Zéro agence spécialisée humour québécois avant RBQC</li>
+        <li>À notre connaissance, aucune agence spécialisée humour francophone avant RBQC</li>
         <li>Contenu francophone = niche naturellement protégée</li>
         <li>Audience déjà active et engagée sur nos pages</li>
         <li>Machine de distribution opérationnelle dès maintenant</li>
       </ul>
       <div class="market-stat-row">
         <span class="market-stat-num">29M</span>
-        <span class="market-stat-lbl">impressions générées · 12 mois · 3 marques</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- TOP CLIPS -->
-<section class="top-clips">
-  <div class="section-label light reveal">Preuves sociales · Top clips</div>
-  <h2 class="reveal">Les clips<br>qui ont explosé.</h2>
-  <div class="clips-grid">
-
-    <div class="clip-card reveal">
-      <div class="clip-thumb" style="background-image:url('img-clip-papa-tenculer.png');">
-        <div class="clip-thumb-overlay"></div>
-        <div class="clip-play">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </div>
-        <div class="clip-thumb-title">Papa va t'encu***, un fou rire mémorable</div>
-      </div>
-      <div class="clip-meta">
-        <div class="clip-platform">TikTok · Rires Bruts Québec</div>
-        <div class="clip-page">Page RBQC — clip viral</div>
-      </div>
-      <div class="clip-stats">
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>
-          6,8K
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          47
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-          130
-        </div>
-      </div>
-    </div>
-
-    <div class="clip-card reveal" style="transition-delay:.1s">
-      <div class="clip-thumb" style="background-image:url('img-clip-fou-villeray.png');">
-        <div class="clip-thumb-overlay"></div>
-        <div class="clip-play">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </div>
-        <div class="clip-thumb-title">Le Fou de Villeray, aux rires de mes voisins</div>
-      </div>
-      <div class="clip-meta">
-        <div class="clip-platform">TikTok · Rires Bruts Québec</div>
-        <div class="clip-page">Page RBQC — clip viral</div>
-      </div>
-      <div class="clip-stats">
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>
-          7,3K
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          37
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-          143
-        </div>
-      </div>
-    </div>
-
-    <div class="clip-card reveal" style="transition-delay:.2s">
-      <div class="clip-thumb" style="background-image:url('img-clip-pa-methot.png');">
-        <div class="clip-thumb-overlay"></div>
-        <div class="clip-play">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </div>
-        <div class="clip-thumb-title">Pa Méthot — clip Punch Line QC</div>
-      </div>
-      <div class="clip-meta">
-        <div class="clip-platform">TikTok · Punch Line QC</div>
-        <div class="clip-page">Page PLC — extrait spectacle</div>
-      </div>
-      <div class="clip-stats">
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>
-          2,7K
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          32
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-          175
-        </div>
-      </div>
-    </div>
-
-    <div class="clip-card reveal" style="transition-delay:.3s">
-      <div class="clip-thumb" style="background-image:url('img-clip-soly-podcast.png');">
-        <div class="clip-thumb-overlay"></div>
-        <div class="clip-play">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </div>
-        <div class="clip-thumb-title">Soly Podcast #1 — extrait viral</div>
-      </div>
-      <div class="clip-meta">
-        <div class="clip-platform">TikTok · Québec LOL</div>
-        <div class="clip-page">Page QL — clip podcast</div>
-      </div>
-      <div class="clip-stats">
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/></svg>
-          1,4K
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          75
-        </div>
-        <div class="clip-stat">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-          40
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PREUVE SOCIALE -->
-<section class="proof">
-  <div class="section-label reveal">Preuve concrète</div>
-  <h2 class="reveal">Quand un clip devient<br>un billet vendu.</h2>
-  <div class="proof-layout">
-    <div class="proof-context reveal">
-      <p>Ce message a été reçu directement dans notre boîte Messenger. Un fan qui avait découvert un clip sur notre page a pris contact pour acheter des billets — en demandant où et comment.</p>
-      <p>Ce n'est pas du trafic générique. C'est un acheteur concret qui n'aurait pas trouvé le show sans le clip. Un exemple parmi plusieurs depuis le lancement.</p>
-      <div class="proof-stat-row">
-        <div class="proof-stat">
-          <div class="proof-stat-num">7,55M</div>
-          <div class="proof-stat-info">
-            <strong>Impressions totales</strong>
-            Tous réseaux depuis le lancement
-          </div>
-        </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num">900K</div>
-          <div class="proof-stat-info">
-            <strong>Vues · Clip le plus performant</strong>
-            Un seul clip, un seul artiste
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="reveal" style="transition-delay:.15s">
-      <div class="messenger-card">
-        <div class="messenger-header">
-          <div class="messenger-avatar">👤</div>
-          <div>
-            <div class="messenger-name">Fan — Messenger</div>
-            <div class="messenger-sub">Via la page Facebook RBQC · Message entrant</div>
-          </div>
-        </div>
-        <div class="messenger-body">
-          <div class="msg-date">2025-12-21 · 17 h 57</div>
-          <div class="msg-row received">
-            <div class="msg-avatar-sm">👤</div>
-            <div class="msg-bubble received">Salut comment qu'on fait acheter des billets pour ton show</div>
-          </div>
-          <div class="msg-date">2025-12-22 · 08 h 17</div>
-          <div class="msg-row received">
-            <div class="msg-avatar-sm">👤</div>
-            <div class="msg-bubble received">Jaimerais vraiment venir</div>
-          </div>
-          <div class="msg-row received">
-            <div class="msg-avatar-sm" style="visibility:hidden"></div>
-            <div class="msg-bubble received">100$ le billet?</div>
-          </div>
-          <div class="msg-date">2025-12-22 · 10 h 32</div>
-          <div class="msg-row sent">
-            <div class="msg-bubble sent">Salut, regardes sur sousecoute.com 🙂</div>
-          </div>
-          <div class="msg-row sent">
-            <div class="msg-link-preview">
-              <strong>sousecoute.com</strong>
-              sousecoute.com
-            </div>
-          </div>
-        </div>
-        <div class="messenger-footer">💡 Fan converti en acheteur potentiel grâce à un clip RBQC.</div>
+        <span class="market-stat-lbl">impressions générées · 12 mois · 3 brands</span>
       </div>
     </div>
   </div>
@@ -365,7 +331,7 @@
 <!-- CTA -->
 <section class="cta-section">
   <p class="cta-label reveal">Convaincu ?</p>
-  <h2 class="cta-title reveal">Parlons<br>de ton projet.</h2>
+  <h2 class="cta-title reveal">Ton contenu est<br>la prochaine<br>étude de cas.</h2>
   <a class="btn-primary reveal" href="contact.html">Contacter RBQC</a>
   <p class="cta-sub reveal">contact@rbqc.ca · Réponse en moins de 24 h</p>
 </section>
@@ -381,7 +347,8 @@
     <li><a href="about.html">À propos</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="footer-copy">© 2025 RBQC — Tous droits réservés</div>
+  <p class="footer-tagline">RBQC, service de clipping vidéo et de clips courts pour l'humour et les podcasts au Québec.</p>
+  <div class="footer-copy">© 2025 Rires Bruts Québec — Tous droits réservés</div>
 </footer>
 
 <script>
@@ -389,40 +356,6 @@ const obs = new IntersectionObserver(e => {
   e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-function fmt(n) {
-  if (n >= 1e6) return (n/1e6).toFixed(2).replace('.', ',') + ' M';
-  if (n >= 1e3) return Math.round(n/1e3) + ' K+';
-  return n.toLocaleString('fr-CA');
-}
-const co = new IntersectionObserver(e => {
-  e.forEach(x => {
-    if (!x.isIntersecting) return;
-    const el = x.target, t = parseInt(el.dataset.target, 10);
-    if (!t) return;
-    let cur = 0;
-    const inc = t / (1800 / 16);
-    const timer = setInterval(() => {
-      cur += inc;
-      if (cur >= t) { cur = t; clearInterval(timer); }
-      el.textContent = fmt(Math.floor(cur));
-    }, 16);
-    co.unobserve(el);
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('[data-target]').forEach(el => co.observe(el));
-
-const barObs = new IntersectionObserver(e => {
-  e.forEach(x => {
-    if (!x.isIntersecting) return;
-    x.target.querySelectorAll('.bar-fill').forEach(b => {
-      b.style.width = parseFloat(b.dataset.pct) + '%';
-    });
-    barObs.unobserve(x.target);
-  });
-}, { threshold: 0.3 });
-const bl = document.getElementById('barList');
-if (bl) barObs.observe(bl);
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
@@ -445,7 +378,6 @@ document.addEventListener('keydown', e => {
     document.body.style.overflow = '';
   }
 });
-
 </script>
 
 </body>

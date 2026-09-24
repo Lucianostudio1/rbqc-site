@@ -157,7 +157,7 @@
       background: var(--card);
       padding: 40px 48px;
       display: grid;
-      grid-template-columns: 72px 1fr 48px;
+      grid-template-columns: 72px 1fr;
       align-items: center; gap: 36px;
       transition: background 0.3s;
     }
@@ -173,7 +173,7 @@
       text-transform: uppercase; color: var(--dark); margin-bottom: 6px;
     }
     .step-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
-    .step-arrow { color: var(--red); font-size: 1.4rem; text-align: right; }
+    .step-arrow { display: none; }
 
     /* ── Comparaison ── */
     .compare { background: var(--dark); }
@@ -281,7 +281,7 @@
     .cta-sub { margin-top: 24px; font-size: 0.72rem; color: rgba(255,255,255,0.4); position: relative; }
 
     @media (max-width: 768px) {
-      .hero { padding: 96px 24px 52px; }
+      .hero { padding: 72px 24px 40px; min-height: 0; }
       .hero-title { font-size: clamp(2.8rem, 10vw, 5rem); }
       .formules-grid { grid-template-columns: 1fr; }
       .formule-card { padding: 40px 28px 36px; }

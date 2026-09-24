@@ -597,7 +597,7 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      .hero { padding: 96px 24px 60px; }
+      .hero { padding: 72px 24px 44px; min-height: 0; }
       .hero-platforms { display: none; }
       .hero-title { font-size: clamp(3.5rem, 12vw, 8rem); }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -612,7 +612,7 @@
       .cta-section { padding: 80px 24px; }
     }
     @media (max-width: 480px) {
-      .hero { padding: 80px 20px 48px; }
+      .hero { padding: 64px 20px 36px; min-height: 0; }
       .stats-grid { grid-template-columns: 1fr; }
       .service-card { padding: 36px 20px; }
       .why-item { padding: 28px 20px; }
