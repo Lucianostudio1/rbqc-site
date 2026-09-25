@@ -14,7 +14,7 @@
 
     /* ── Hero ── */
     .hero {
-      min-height: 65vh;
+      min-height: auto;
       display: flex; flex-direction: column;
       justify-content: flex-end;
       padding: 140px 64px 80px;

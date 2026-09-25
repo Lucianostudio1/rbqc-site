@@ -12,10 +12,10 @@
    ══════════════════════════════════════════════════════ */
 
     .hero {
-      min-height: 45dvh;
+      min-height: auto;
       display: flex; flex-direction: column;
       justify-content: flex-end;
-      padding: 140px 64px 72px;
+      padding: 80px 64px 56px;
       position: relative; overflow: hidden;
       background: var(--paper);
     }
@@ -39,7 +39,7 @@
     }
     .hero-title {
       font-family: 'Big Shoulders Display', sans-serif;
-      font-weight: 900; font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+      font-weight: 900; font-size: clamp(1.5rem, 2.2vw, 2.5rem);
       text-transform: uppercase; line-height: 0.88;
       letter-spacing: -0.02em; color: var(--dark);
       opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards;
