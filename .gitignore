@@ -1,3 +1,10 @@
 *.csv
 .DS_Store
 *.zip
+
+# Docs de travail (SEO, analyse, veille)
+VIGIE_COMPETITEURS.md
+SEO_STRUCTURE_V2.md
+algorithmes-tiktok-reels-shorts-2026.md
+*.textClipping
+og-image-source.html.png
