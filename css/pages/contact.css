@@ -42,7 +42,7 @@
     .hero-title {
       font-family: 'Big Shoulders Display', sans-serif;
       font-weight: 900;
-      font-size: clamp(4rem, 10vw, 10rem);
+      font-size: clamp(2.8rem, 4.5vw, 4.5rem);
       text-transform: uppercase; line-height: 0.87;
       letter-spacing: -0.02em; color: var(--dark);
       opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards;
