@@ -137,6 +137,28 @@
       content: '✓'; position: absolute; left: 0;
       color: var(--red); font-weight: 700; font-size: 0.8rem;
     }
+    .formule-cta {
+      display: block;
+      margin-top: 28px;
+      padding: 14px 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid var(--border);
+      color: var(--dark);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .formule-cta:hover { background: var(--dark); color: var(--amber); border-color: var(--dark); }
+    .formule-card.best .formule-cta {
+      background: var(--mustard);
+      color: var(--dark);
+      border-color: var(--mustard);
+      font-weight: 700;
+    }
+    .formule-card.best .formule-cta:hover { background: #F5C400; }
     .formule-card.best .formule-list li { color: rgba(255,255,255,0.5); }
     .formule-card.best .formule-list li::before { color: var(--amber); }
 

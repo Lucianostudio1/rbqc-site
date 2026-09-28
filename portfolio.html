@@ -57,6 +57,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
 <!-- NAV -->
 <nav id="nav">
@@ -85,7 +86,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-eyebrow">Notre terrain de jeu</div>
   <h1 class="hero-label" style="font-size:clamp(1.5rem,3vw,2.2rem);font-family:'Big Shoulders Display',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;color:white;line-height:1.05;max-width:680px;margin-bottom:20px;">
     Avant de clipper pour toi,<br>on a bâti nos propres audiences.
@@ -130,7 +131,8 @@
     <!-- Clips phares RBQC -->
     <div class="brand-clips-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);">
       <div class="clip-card" style="background:var(--paper);">
-        <div class="clip-thumb" style="background-image:url('img-clip-papa-tenculer.png');aspect-ratio:16/7;">
+        <div class="brand-clip-thumb">
+          <img src="img-clip-papa-tenculer.png" alt="Clip stand-up Rires Bruts Québec — Papa va t'encu***, un fou rire mémorable" loading="lazy">
           <div class="clip-thumb-overlay"></div>
           <div class="clip-thumb-title">Papa va t'encu***, un fou rire mémorable</div>
         </div>
@@ -143,7 +145,8 @@
         </div>
       </div>
       <div class="clip-card" style="background:var(--paper);">
-        <div class="clip-thumb" style="background-image:url('img-clip-fou-villeray.png');aspect-ratio:16/7;">
+        <div class="brand-clip-thumb">
+          <img src="img-clip-fou-villeray.png" alt="Clip stand-up Rires Bruts Québec — Le Fou de Villeray, aux rires de mes voisins" loading="lazy">
           <div class="clip-thumb-overlay"></div>
           <div class="clip-thumb-title">Le Fou de Villeray, aux rires de mes voisins</div>
         </div>
@@ -189,7 +192,8 @@
     </div>
     <div class="brand-clips-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);">
       <div class="clip-card" style="background:var(--paper);">
-        <div class="clip-thumb" style="background-image:url('img-clip-soly-podcast.png');aspect-ratio:16/7;">
+        <div class="brand-clip-thumb">
+          <img src="img-clip-soly-podcast.png" alt="Clip podcast Québec LOL — Soly Podcast #1 extrait viral" loading="lazy">
           <div class="clip-thumb-overlay"></div>
           <div class="clip-thumb-title">Soly Podcast #1 — extrait viral</div>
         </div>
@@ -240,7 +244,8 @@
     </div>
     <div class="brand-clips-row" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);">
       <div class="clip-card" style="background:var(--paper);">
-        <div class="clip-thumb" style="background-image:url('img-clip-pa-methot.png');aspect-ratio:16/7;">
+        <div class="brand-clip-thumb">
+          <img src="img-clip-pa-methot.png" alt="Clip humour Punch Line QC — Pa Méthot sur scène" loading="lazy">
           <div class="clip-thumb-overlay"></div>
           <div class="clip-thumb-title">Pa Méthot — clip Punch Line QC</div>
         </div>
@@ -270,24 +275,24 @@
 
   <div class="reveal timeline-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);">
     <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--border);">
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Semaine 1</div>
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Premiers clips en ligne</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">48-72 h après dépôt du fichier. Tes clips sont en ligne et commencent à circuler.</p>
+      <h3 class="timeline-period" style="color:var(--muted);">Semaine 1</h3>
+      <p class="timeline-milestone">Premiers clips en ligne</p>
+      <p class="timeline-desc">48-72 h après dépôt du fichier. Tes clips sont en ligne et commencent à circuler.</p>
     </div>
     <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--border);">
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Mois 1-2</div>
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Premières vues organiques</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">Premières interactions, premiers abonnés. La traction commence à se former.</p>
+      <h3 class="timeline-period" style="color:var(--muted);">Mois 1-2</h3>
+      <p class="timeline-milestone">Premières vues organiques</p>
+      <p class="timeline-desc">Premières interactions, premiers abonnés. La traction commence à se former.</p>
     </div>
     <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--amber);">
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--amber);margin-bottom:16px;">Mois 3-6</div>
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Clips à 100K+ vues</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">La masse de clips crée un effet compound. C'est là que les vrais pics de performance apparaissent.</p>
+      <h3 class="timeline-period" style="color:var(--amber);">Mois 3-6</h3>
+      <p class="timeline-milestone">Clips à 100K+ vues</p>
+      <p class="timeline-desc">La masse de clips crée un effet compound. C'est là que les vrais pics de performance apparaissent.</p>
     </div>
     <div style="background:var(--card);padding:40px 32px;border-top:3px solid var(--red);">
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:1.4rem;text-transform:uppercase;color:var(--red);margin-bottom:16px;">12 mois</div>
-      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:2.2rem;color:var(--dark);line-height:1;margin-bottom:12px;">Actifs permanents</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.65;">29M+ impressions, 1 715 clips en ligne. Le contenu continue de générer des vues des mois après publication.</p>
+      <h3 class="timeline-period" style="color:var(--red);">12 mois</h3>
+      <p class="timeline-milestone">Actifs permanents</p>
+      <p class="timeline-desc">29M+ impressions, 1 715 clips en ligne. Le contenu continue de générer des vues des mois après publication.</p>
     </div>
   </div>
 </section>
@@ -348,7 +353,7 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <p class="footer-tagline">RBQC, service de clipping vidéo et de clips courts pour l'humour et les podcasts au Québec.</p>
-  <div class="footer-copy">© 2025 Rires Bruts Québec — Tous droits réservés</div>
+  <div class="footer-copy">© 2026 Rires Bruts Québec — Tous droits réservés</div>
 </footer>
 
 <script>

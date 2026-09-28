@@ -94,6 +94,8 @@
       font-weight: 600;
       color: var(--dark);
       letter-spacing: 0.03em;
+      text-decoration: none;
+      cursor: pointer;
     }
     .hero-channel-badge img {
       width: 20px; height: 20px;

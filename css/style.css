@@ -281,6 +281,24 @@ footer {
 .footer-tagline { font-size: 0.72rem; color: rgba(255,255,255,0.22); max-width: 380px; line-height: 1.5; }
 .footer-copy { font-size: 0.68rem; color: rgba(255,255,255,0.18); }
 
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 200;
+  background: var(--dark);
+  color: var(--amber);
+  padding: 12px 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 16px; }
+
 /* ── Focus visible ── */
 :focus-visible {
   outline: 2px solid var(--red);
