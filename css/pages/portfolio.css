@@ -275,6 +275,30 @@
       .platform-card  { padding: 28px 20px; }
     }
 
+    /* ── Brand social links ── */
+    .brand-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+    }
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .brand-link:hover { color: var(--dark); border-color: var(--dark); }
+
     /* ── Brand clip thumbs (études de cas) ── */
     .brand-clip-thumb {
       position: relative;
