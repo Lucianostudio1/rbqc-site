@@ -1,0 +1,379 @@
+/* ══════════════════════════════════════════════════════
+   RBQC — Pages cibles (humoristes, podcasts, producteurs)
+   ══════════════════════════════════════════════════════ */
+
+/* ── Hero ── */
+.lp-hero {
+  min-height: auto;
+  padding: 120px 64px 72px;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.lp-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 55%; height: 100%;
+  background: radial-gradient(ellipse 50% 60% at 80% -5%, rgba(200,53,26,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.lp-hero-eyebrow {
+  font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 28px;
+  display: flex; align-items: center; gap: 14px;
+  opacity: 0; animation: fadeUp 0.7s ease 0.2s forwards;
+}
+.lp-hero-eyebrow::before {
+  content: ''; width: 22px; height: 2px;
+  background: var(--red); display: block; flex-shrink: 0;
+}
+.lp-hero h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  text-transform: uppercase;
+  line-height: 0.88; letter-spacing: -0.02em;
+  color: var(--dark);
+  opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards;
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+.lp-hero h1 .accent { color: var(--red); }
+.lp-hero-sub {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--muted); line-height: 1.7; max-width: 540px;
+  opacity: 0; animation: fadeUp 0.7s ease 0.5s forwards;
+  margin-bottom: 40px;
+}
+.lp-hero-cta {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.7s ease 0.65s forwards;
+}
+
+/* ── Preuve stats (réutilise .stats-grid depuis style, styles spécifiques ici) ── */
+.lp-stats {
+  background: var(--dark);
+  padding: 80px 64px;
+}
+.lp-stats-label {
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 48px;
+  display: flex; align-items: center; gap: 14px;
+}
+.lp-stats-label::before {
+  content: ''; width: 18px; height: 2px;
+  background: var(--red); display: block; flex-shrink: 0;
+}
+.lp-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.lp-stat {
+  padding: 32px 40px 32px 0;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.lp-stat:last-child { border-right: none; padding-left: 40px; }
+.lp-stat:nth-child(2) { padding-left: 40px; }
+.lp-stat-num {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--amber);
+  line-height: 1; letter-spacing: -0.02em;
+  display: block;
+}
+.lp-stat-label {
+  font-size: 0.8rem; font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  margin-top: 8px; display: block;
+}
+.lp-stat-sub {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.25);
+  margin-top: 4px; display: block;
+}
+
+/* ── Pour toi (le problème) ── */
+.lp-pain {
+  background: var(--surface);
+  padding: 100px 64px;
+}
+.lp-pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 56px;
+}
+.lp-pain-title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+  line-height: 0.9; letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 32px;
+}
+.lp-pain-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.lp-pain-list li {
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.6;
+  padding-left: 20px;
+  border-left: 2px solid var(--red);
+}
+
+/* ── Comment ça marche ── */
+.lp-steps {
+  background: var(--paper);
+  padding: 100px 64px;
+}
+.lp-steps h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-transform: uppercase;
+  line-height: 0.9; letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 64px;
+  max-width: 600px;
+}
+.lp-steps-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.lp-step {
+  padding: 0 40px 0 0;
+  border-right: 1px solid var(--border);
+}
+.lp-step:last-child { border-right: none; }
+.lp-step:not(:first-child) { padding-left: 40px; }
+.lp-step-num {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--border);
+  line-height: 1;
+  display: block;
+  margin-bottom: 16px;
+}
+.lp-step-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.lp-step-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── Objection ── */
+.lp-objection {
+  background: var(--dark);
+  padding: 100px 64px;
+}
+.lp-objection-inner {
+  max-width: 720px;
+}
+.lp-objection-q {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  text-transform: uppercase;
+  line-height: 0.95; letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 32px;
+}
+.lp-objection-a {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+  max-width: 620px;
+}
+.lp-objection-a strong { color: var(--amber); font-weight: 600; }
+
+/* ── Formule recommandée ── */
+.lp-formule {
+  background: var(--surface);
+  padding: 100px 64px;
+}
+.lp-formule-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.lp-formule-text h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  text-transform: uppercase;
+  line-height: 0.9; letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+.lp-formule-text p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.lp-formule-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 40px;
+}
+.lp-formule-card-tag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 16px;
+  display: block;
+}
+.lp-formule-card-name {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 0.95;
+}
+.lp-formule-card-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 32px;
+}
+.lp-formule-card-list li {
+  font-size: 0.88rem;
+  color: var(--ink);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+.lp-formule-card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.lp-formule-note {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* ── CTA section (override pour fond sombre) ── */
+.cta-section {
+  background: var(--dark);
+  padding: 100px 64px;
+  text-align: center;
+}
+.cta-label {
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 20px;
+}
+.cta-title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 7vw, 7rem);
+  text-transform: uppercase;
+  line-height: 0.85; letter-spacing: -0.02em;
+  color: white;
+  margin-bottom: 48px;
+}
+.cta-sub {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.1em;
+}
+
+/* ── Partenariat (producteurs seulement) ── */
+.lp-partenariat-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(245,196,0,0.08);
+  border: 1px solid rgba(245,196,0,0.2);
+  padding: 20px 24px;
+  margin-top: 32px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+.lp-partenariat-note strong { color: var(--amber); }
+
+/* ── Hover states interactifs ── */
+.lp-step {
+  transition: background 0.2s;
+  cursor: default;
+}
+.lp-step:hover .lp-step-num { color: var(--red); transition: color 0.2s; }
+.lp-step:hover .lp-step-title { color: var(--red); transition: color 0.2s; }
+
+.lp-formule-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  cursor: default;
+}
+.lp-formule-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26,18,9,0.1);
+}
+
+.lp-stat { transition: opacity 0.2s; }
+.lp-stat:hover { opacity: 0.85; }
+
+.lp-pain-list li {
+  transition: border-color 0.2s, padding-left 0.2s;
+}
+.lp-pain-list li:hover {
+  border-left-color: var(--red);
+  padding-left: 24px;
+}
+
+.lp-objection-a strong { transition: color 0.2s; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .lp-steps-list { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .lp-step { border-right: none; padding-right: 0; }
+  .lp-step:not(:first-child) { padding-left: 0; }
+  .lp-formule-inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .lp-hero, .lp-pain, .lp-steps, .lp-objection, .lp-formule, .lp-stats { padding: 72px 24px; }
+  .lp-pain-grid { grid-template-columns: 1fr; gap: 40px; }
+  .lp-stats-grid { grid-template-columns: 1fr; }
+  .lp-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 24px 0; }
+  .lp-stat:last-child { border-bottom: none; }
+  .lp-stat:nth-child(2) { padding-left: 0; }
+  .lp-steps-list { grid-template-columns: 1fr; gap: 32px; }
+  .lp-hero-cta { flex-direction: column; }
+  .lp-hero-cta .btn-primary, .lp-hero-cta .btn-ghost { text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .lp-hero { padding: 100px 20px 56px; }
+  .lp-pain, .lp-steps, .lp-objection, .lp-formule, .lp-stats { padding: 56px 20px; }
+}

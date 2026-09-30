@@ -96,6 +96,12 @@
       letter-spacing: 0.03em;
       text-decoration: none;
       cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .hero-channel-badge:hover {
+      background: white;
+      border-color: var(--red);
+      transform: translateX(4px);
     }
     .hero-channel-badge img {
       width: 20px; height: 20px;
@@ -435,6 +441,26 @@
       .services-cta-strip .btn-primary { width: 100%; text-align: center; }
     }
 
+    /* ── Liens pages cibles ── */
+    .cible-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .cible-link {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .cible-link:hover { color: var(--dark); border-color: var(--dark); }
+
     /* ── Services preview ── */
     .services { background: var(--surface); }
     .services-header {
@@ -465,11 +491,13 @@
       background: var(--card);
       padding: 56px 44px;
       position: relative;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
       display: flex;
       flex-direction: column;
+      cursor: pointer;
     }
-    .service-card:hover { background: var(--paper); }
+    .service-card:hover { background: var(--paper); transform: translateY(-3px); }
+    .service-card.featured:hover { transform: translateY(-3px); }
     .service-card.featured { background: var(--red); }
     .service-card.featured:hover { background: #A82D16; }
     .service-num {
@@ -503,11 +531,13 @@
     .service-card.featured .service-unit { color: rgba(255,255,255,0.55); }
     .service-name {
       font-family: 'Big Shoulders Display', sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
       text-transform: uppercase;
       color: var(--dark);
-      margin-bottom: 10px;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
     }
     .service-card.featured .service-name { color: white; }
     .service-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.75; flex: 1; }
@@ -627,6 +657,15 @@
     @media (max-width: 768px) {
       .clips-mini-grid { grid-template-columns: 1fr; }
     }
+    /* ── Proof note (droits) ── */
+    .proof-note {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.28);
+      margin-top: 16px;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+
     /* ── Proof ── */
     .proof {
       background: var(--dark);

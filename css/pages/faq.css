@@ -129,8 +129,13 @@
     .faq-item.open .faq-q::after { content: '−'; }
     .faq-a {
       font-size: 1rem; color: var(--muted);
-      line-height: 1.8; padding: 0 28px 22px;
-      display: none;
+      line-height: 1.8;
+      padding: 0 28px;
+      padding-bottom: 0;
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding-bottom 0.35s ease;
     }
     .faq-a a { color: var(--red); text-decoration: none; }
     .faq-a a:hover { text-decoration: underline; }
@@ -143,7 +148,10 @@
       transition: border-color 0.2s;
     }
     .faq-a-link:hover { border-bottom-color: var(--red); }
-    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-a {
+      max-height: 800px;
+      padding-bottom: 22px;
+    }
 
     /* CTA */
     .cta-section {

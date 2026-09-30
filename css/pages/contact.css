@@ -109,6 +109,49 @@
       padding-right: 40px;
       cursor: pointer;
     }
+    /* ── Checkbox LCAP ── */
+    .form-group--checkbox { margin-bottom: 20px; }
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      color: var(--ink);
+      line-height: 1.55;
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: 18px; height: 18px;
+      border: 2px solid var(--border);
+      background: var(--card);
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-top: 2px;
+      appearance: none;
+      -webkit-appearance: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .checkbox-label input[type="checkbox"]:checked {
+      background: var(--red);
+      border-color: var(--red);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l3 3 5-6' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 8px;
+    }
+    .checkbox-label:hover input[type="checkbox"] { border-color: var(--red); }
+    .form-loi25 {
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+    .form-loi25 a { color: var(--muted); text-decoration: underline; opacity: 0.7; }
+    .form-loi25 a:hover { opacity: 1; }
+
     .form-submit {
       margin-top: 8px;
       display: flex; align-items: center; gap: 20px; flex-wrap: wrap;

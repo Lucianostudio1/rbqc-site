@@ -128,8 +128,13 @@
     .formule-card.best .formule-unit { color: rgba(255,255,255,0.4); }
     .formule-name {
       font-family: 'Big Shoulders Display', sans-serif;
-      font-weight: 700; font-size: 1.3rem;
-      text-transform: uppercase; color: var(--dark); margin-bottom: 16px;
+      font-weight: 900;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      text-transform: uppercase;
+      color: var(--dark);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
     }
     .formule-card.best .formule-name { color: white; }
     .formule-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 32px; }
