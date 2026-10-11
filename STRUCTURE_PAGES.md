@@ -43,9 +43,9 @@ Cet angle répond à l'objection naturelle : "j'ai vu des vidéos sur vos pages 
 - Services — processus étape 3 : expliquer que chaque lot de clips = plusieurs chances de percer
 
 **Chiffres disponibles (CSV Metricool, 12 mois) :**
-- RBQC : 846 posts, 20,9M impressions, top clip 558K vues
-- Québec LOL : 589 posts, 5,75M impressions, top clip 188K vues
-- Punch Line QC : 280 posts, 2,3M impressions, top clip 171K vues
+- RBQC : 846 posts, 20,9M impressions, top clip 558K impressions
+- Québec LOL : 589 posts, 5,75M impressions, top clip 188K impressions
+- Punch Line QC : 280 posts, 2,3M impressions, top clip 171K impressions
 - **Total : 1 715 posts, 28,9M impressions**
 - 72% de rétention moyenne
 
@@ -124,7 +124,7 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 #### 1.2 — Chiffres clés (condensé — 3 stats maximum)
 - 29M+ impressions (12 mois, 3 pages opérées par RBQC)
 - 72% taux de rétention moyen
-- 558K vues — clip le plus performant
+- 558K impressions — clip le plus performant
 - **H2 proposé :** `Des clips qui se font voir pour vrai`
 - **Mots-clés à intégrer :** impressions, vues, rétention, sans publicité payante
 - **Note technique :** chiffres en texte HTML, mention de période visible.
