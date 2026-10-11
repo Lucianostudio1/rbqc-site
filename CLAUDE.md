@@ -20,10 +20,9 @@ RBQC (Rires Bruts Québécois) est un service québécois de clipping et distrib
 ## Cible
 Humoristes et talents émergents (ex. cohortes École nationale de l'humour), podcasteurs francophones, créateurs YouTube québécois.
 
-## Tarifs (3 formules actives)
-- Clipping à la pièce : 2 $/clip — montage court-format livré en 48-72 h, idéal pour tester
+## Tarifs (2 formules actives)
+- Clipping à la pièce : [GRILLE À CONFIRMER] — montage court-format livré en 48-72 h, idéal pour tester
 - Payé à la performance : 0,50 $/1 000 vues générées — clipping + distribution inclus, tu paies que ce qui performe
-- Commission sur billets : 10 % par billet vendu via lien ou code promo tracké RBQC — zéro déboursé
 
 ## Structure du site (8 pages)
 Accueil, Services, Tarifs, Blogue (avec au moins un article publié : clipping-pour-comediens-quebec.html), FAQ, À propos/Contact, plus 2 autres pages. Nav desktop uniforme : 4 items primaires + CTA. Nav mobile et footer incluent Blogue et FAQ.
