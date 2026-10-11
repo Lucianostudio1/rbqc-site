@@ -11,10 +11,9 @@
 
 **Quoi** : Transformer des shows, spectacles et podcasts en clips courts distribués sur TikTok, Reels, Facebook et YouTube Shorts.
 
-**Trois formules** :
-- Clipping à la pièce : 2$/clip
-- Pay-for-performance : 0,50$/1 000 vues
-- Commission sur billets : 10%
+**Deux formules** :
+- Clipping à la pièce : sur mesure, on commence par un test
+- Pay-for-performance : sur mesure, on commence par un test
 
 **Chiffres prouvables** : 29M impressions · 398K interactions · 72% rétention · 1 715 clips · 12 mois · 3 marques (RBQC, Québec LOL, Punch Line QC)
 
@@ -65,12 +64,12 @@ rbqc.ca/blog/clipping-pour-comediens-quebec.html → Article pilier
 | Champ | Valeur actuelle | Longueur | Statut |
 |-------|----------------|----------|--------|
 | `<title>` | Services de Clipping Vidéo pour Humoristes Québécois | 52c | ✅ |
-| `<meta description>` | Clipping à 2$/clip, pay-for-performance à 0,50$/1 000 vues, ou commission 10% sur billets. Distribution TikTok, Reels, Facebook et Shorts. Sans risque. | 152c | ✅ |
+| `<meta description>` | Clipping vidéo pour humoristes et podcasts québécois. 2 formules : à la pièce ou payé à la performance. Sur mesure, on commence par un test. | — | ✅ |
 | `<h1>` | Clipping pour humoristes et podcasts québécois. | ~47c | ✅ |
-| Schema | Service · 3 Offers avec prix CAD | — | ✅ |
+| Schema | Service · 2 Offers | — | ✅ |
 
 **H2s** :
-1. Trois formules de clipping, sans risque.
+1. Choisis ta formule.
 2. De ton show à 4 plateformes, en 4 étapes.
 3. Sans RBQC vs avec RBQC : la différence.
 4. Tes questions sur le clipping, répondues.

@@ -15,7 +15,7 @@ par section, en fonction de l'intention de recherche et de la cible.
 
 ## 0 — DÉCISIONS À TRANCHER AVANT L'IMPLÉMENTATION
 
-1. **Tarifs.** ✅ TRANCHÉ — 3 formules : 2 $/clip · 0,50 $/1 000 vues · 10 % par billet. CLAUDE.md mis à jour.
+1. **Tarifs.** ✅ TRANCHÉ — 2 formules : clipping à la pièce · payé à la performance. Prix sur mesure, non affichés publiquement. CLAUDE.md mis à jour.
 2. **Nom de la marque.** ✅ TRANCHÉ — **Rires Bruts Québec** (pas Québécois). CLAUDE.md mis à jour.
 3. **Nav "Résultats" vs page "Notre terrain de jeu".** ✅ TRANCHÉ — "Résultats" dans la nav, "Notre terrain de jeu" comme surtitre sur la page.
 4. **Slugs.** ✅ TRANCHÉ — Ne pas renommer `services.html` ni `portfolio.html`.
@@ -98,7 +98,7 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 
 ## PAGE 1 — Accueil (`index.html`)
 
-**Rôle :** Première impression. Accroche, chiffres-clés condensés, 3 formules résumées, preuve humaine (Messenger), CTA.
+**Rôle :** Première impression. Accroche, chiffres-clés condensés, 2 formules résumées, preuve humaine (Messenger), CTA.
 **Intention visiteur :** "C'est quoi RBQC et est-ce que ça peut m'aider ?"
 **Action souhaitée :** Cliquer vers Services ou Contact.
 
@@ -129,13 +129,12 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 - **Mots-clés à intégrer :** impressions, vues, rétention, sans publicité payante
 - **Note technique :** chiffres en texte HTML, mention de période visible.
 
-#### 1.3 — Services résumé (3 cartes)
-- Clipping à la pièce — 2 $/clip
-- Payé à la performance — 0,50 $/1 000 vues
-- Commission sur billets — 10 % par billet vendu
+#### 1.3 — Services résumé (2 cartes)
+- Clipping à la pièce — sur mesure, on commence par un test
+- Payé à la performance — sur mesure, on commence par un test
 - Lien vers services.html pour le détail
-- **H2 proposé :** `3 façons de travailler ensemble`
-- **Mots-clés à intégrer :** prix par clip, paiement à la performance, commission sur billets de spectacle
+- **H2 proposé :** `2 façons de travailler ensemble`
+- **Mots-clés à intégrer :** montage clips courts, paiement à la performance
 
 #### 1.4 — Preuve humaine (screenshot Messenger)
 - Fan qui découvre un clip et demande comment acheter des billets
@@ -151,7 +150,7 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 
 ## PAGE 2 — Comment ça marche (`services.html`)
 
-**Rôle :** Expliquer le processus de A à Z + détailler les 3 formules. Page de décision.
+**Rôle :** Expliquer le processus de A à Z + détailler les 2 formules. Page de décision.
 **Intention visiteur :** "OK je suis intéressé, mais comment ça fonctionne concrètement ?"
 **Action souhaitée :** Contacter RBQC pour démarrer.
 
@@ -159,9 +158,9 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 - **Mot-clé principal :** service de montage de clips courts pour podcast et spectacle
 - **Mots-clés secondaires :** prix montage vidéo TikTok, montage de clips pour Reels, publication automatique TikTok et YouTube Shorts, sous-titres vidéo courte, tarif clipping vidéo
 - **Title :** `Comment ça marche : clipping et distribution vidéo | RBQC`
-- **Meta description :** `Tu envoies ton podcast ou ton show, on le découpe en clips courts et on les publie sur 4 plateformes. 3 formules : à la pièce, à la performance ou à la commission.`
+- **Meta description :** `Tu envoies ton podcast ou ton show, on le découpe en clips courts et on les publie sur 4 plateformes. 2 formules disponibles : à la pièce ou payé à la performance.`
 - **Slug :** `/services.html` (inchangé)
-- **Schema :** Service (serviceType "Montage et distribution de clips vidéo courts", provider RBQC, areaServed Québec) avec 3 `Offer`
+- **Schema :** Service (serviceType "Montage et distribution de clips vidéo courts", provider RBQC, areaServed Québec) avec 2 `Offer`
 - **Maillage sortant :** FAQ (ancre "questions fréquentes"), Résultats, Contact, article blogue "clipping pour comédiens"
 
 ### Sections
@@ -175,10 +174,10 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 - **H3 par étape :** `1. Tu envoies ton fichier` / `2. On sélectionne et on monte les meilleurs moments` / `3. On publie sur TikTok, Reels, Facebook et Shorts` / `4. Tu reçois ton rapport de performance`
 - **Mots-clés à intégrer :** montage vidéo court, meilleurs moments, sous-titres, format vertical 9:16, publication automatique, meilleures heures, rapport mensuel, suivi des ventes de billets
 
-#### 2.3 — 3 formules détaillées
+#### 2.3 — 2 formules détaillées
 - **H2 proposé :** `Choisis ta formule`
-- **H3 :** `Clipping à la pièce` / `Payé à la performance` / `Commission sur billets vendus`
-- **Mots-clés à intégrer :** prix par clip, combien coûte un monteur vidéo TikTok, payer au nombre de vues, commission sur billets de spectacle, sans frais fixes, sans engagement
+- **H3 :** `Clipping à la pièce` / `Payé à la performance`
+- **Mots-clés à intégrer :** combien coûte un monteur vidéo TikTok, payer au nombre de vues, sans frais fixes, sans engagement
 
 #### 2.4 — Comparaison Avant / Après RBQC (`<table>` HTML)
 - **H2 proposé :** `Avant RBQC / Avec RBQC`
@@ -243,7 +242,7 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 
 ### SEO de la page
 - **Title :** `FAQ clipping vidéo : prix, droits, délais | RBQC`
-- **Meta description :** `Combien de clips par épisode, qui garde les droits, délais de livraison, suivi des billets vendus : toutes les réponses avant de te lancer avec RBQC.`
+- **Meta description :** `Combien de clips par épisode, qui garde les droits, délais de livraison, formules disponibles : toutes les réponses avant de te lancer avec RBQC.`
 - **Schema :** FAQPage
 
 ### Questions (format "telles que les gens les tapent")
@@ -251,7 +250,7 @@ Blogue = informationnel, longue traîne, levier principal de trafic.
 - `Combien de clips on peut sortir d'un épisode de podcast ou d'un spectacle ?`
 - `Est-ce que je garde les droits sur mes clips ?`
 - `Combien de temps ça prend avant de recevoir mes clips ?`
-- `Comment vous suivez les billets vendus grâce aux clips ?`
+- `Comment savoir si les clips ont généré des ventes de billets ?`
 - `Est-ce que je peux tester avec un seul épisode ?`
 
 **À ajouter :**

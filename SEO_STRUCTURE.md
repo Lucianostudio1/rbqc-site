@@ -44,11 +44,10 @@
 - **Mots-clés secondaires** : `[À REMPLIR]`
 
 ### Sections / H2s suggérés
-1. `[À REMPLIR]` — Formule Clipping à la pièce (2$/clip)
-2. `[À REMPLIR]` — Formule Pay-for-performance (0,50$/1K vues)
-3. `[À REMPLIR]` — Formule Commission (10% billets)
-4. `[À REMPLIR]` — Comment ça fonctionne (4 étapes)
-5. `[À REMPLIR]` — FAQ
+1. `[À REMPLIR]` — Formule Clipping à la pièce
+2. `[À REMPLIR]` — Formule Pay-for-performance
+3. `[À REMPLIR]` — Comment ça fonctionne (4 étapes)
+4. `[À REMPLIR]` — FAQ
 
 ### OG / Social
 - **og:title** : `[À REMPLIR]`
@@ -178,6 +177,6 @@ blog/article ──→ contact.html (CTA fin d'article)
 - **Ton** : Direct, québécois, pas corporatif — tu/vous selon contexte
 - **Différenciateur** : Seule agence de clipping pro pour l'humour québécois
 - **Preuve chiffrée** : 29M impressions, 398K interactions, 72% rétention, 1 715 clips
-- **USP** : 3 formules sans risque, 12 plateformes, pipeline automatisé
+- **USP** : 2 formules, 12 comptes sur 4 plateformes, sélection humaine sur chaque clip
 - **Ne pas mentionner** : noms de personnes physiques (Liam, Luciano Cepelotti)
 - **Langue** : Français québécois — pas de traduction mot-à-mot du français international
