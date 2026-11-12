@@ -42,7 +42,7 @@ Accueil, Services, Tarifs, Blogue (avec au moins un article publié : clipping-p
 - Remplacer les chiffres placeholder (nombre de clips, vues cumulées) par les vraies stats Facebook avant l'outreach
 
 ## Nom officiel de la marque principale
-**Rires Bruts Québec** (pas "Québécois") — cohérent avec le sigle RBQC. À utiliser partout : schema, footer, À propos, portfolio.
+**Rires Brut Québec** (sans "s" à Brut, pas "Québécois") — cohérent avec le nom sur YouTube, Facebook et TikTok. À utiliser partout : schema, footer, À propos, portfolio.
 
 ## Ce qui existe déjà (assets)
 - 3 comptes Facebook performants utilisés comme preuve sociale
