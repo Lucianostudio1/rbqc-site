@@ -1,16 +1,26 @@
 *.csv
 .DS_Store
 *.zip
-
-# Docs de travail (SEO, analyse, veille)
-VIGIE_COMPETITEURS.md
-SEO_STRUCTURE_V2.md
-algorithmes-tiktok-reels-shorts-2026.md
 *.textClipping
+
+# Docs de travail internes — ne jamais déployer
+CLAUDE.md
+STRUCTURE_PAGES.md
+SEO_BRIEF_AGENT.md
+SEO_STRUCTURE.md
+SEO_STRUCTURE_V2.md
+VIGIE_COMPETITEURS.md
+algorithmes-tiktok-reels-shorts-2026.md
+
+# Assets internes / brouillons
+og-image-gen.html
 og-image-source.html.png
+Gemini_Generated_Image_*.png
+"PUNCHLINEQC - SEPT 2026.png"
+"QUEBECLOL - SEPT 2026.png"
+"RBQC - SEPT 2026.png"
 img-profil-*.png
 img-clip-*.png
 rbqc.png
-og-image-gen.html
 promoteurdhumourqubcois*.png
 Capture*.png
