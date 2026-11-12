@@ -56,6 +56,35 @@
       position: relative; z-index: 1;
     }
 
+    .article-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.65s forwards;
+      position: relative; z-index: 1;
+    }
+    .article-author-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--amber);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900; font-size: 0.9rem;
+      color: var(--dark);
+      flex-shrink: 0;
+    }
+    .article-author-info { display: flex; flex-direction: column; gap: 2px; }
+    .article-author-name {
+      font-size: 0.78rem; font-weight: 600;
+      color: white; letter-spacing: 0.02em;
+    }
+    .article-author-role {
+      font-size: 0.65rem; color: rgba(255,255,255,0.38);
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+
     /* Article body */
     .article-body { background: var(--paper); }
     .article-content {
